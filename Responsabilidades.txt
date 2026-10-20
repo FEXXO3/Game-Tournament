@@ -1,5 +1,23 @@
-Fernando David Dominguez Cueto 
-Yesid Santiago Rojas Quintero
-Isaac David Mendoza Caro 
 Santiago Palomino Ramirez 
+RF-M01-01 — Registro de usuarios	
+RF-M01-02 — Inicio de sesión	
+RF-M01-03 — Recuperación de contraseña
 jhon Alexander Peña Cortes 
+RF-M02-01 — Crear torneo	8
+RF-M02-02 — Consultar torneos	
+RF-M03-01 — Inscribirse a un torneo
+Fernando David Dominguez Cueto 
+RF-M03-02 — Revisar inscripciones	
+RF-M04-01 — Generar enfrentamientos	
+RF-M04-02 — Publicar horarios	
+Yesid Santiago Rojas Quintero
+RF-M05-01 — Registrar resultado	
+RF-M05-02 — Consultar tabla de posiciones	
+RF-M06-01 — Consultar ranking general	
+Isaac David Mendoza Caro 
+RF-M06-02 — Consultar estadísticas de jugador
+RF-M07-01 — Gestionar usuarios	
+RF-M07-02 — Corregir datos y ver resumen
+
+	
+
