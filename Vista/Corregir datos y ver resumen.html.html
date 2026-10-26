@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed-variant": "#004f54",
+          "surface-variant": "#222329",
+          "primary-container": "#ff5e00",
+          "on-tertiary-fixed-variant": "#5e4200",
+          "tertiary-fixed": "#ffdea8",
+          "secondary-fixed": "#7df4ff",
+          "on-primary-container": "#ffffff",
+          "on-primary-fixed-variant": "#7f2b00",
+          "on-tertiary-fixed": "#271900",
+          "on-primary": "#ffffff",
+          "background": "#0d0e13",
+          "secondary-fixed-dim": "#00dbe9",
+          "inverse-primary": "#a63b00",
+          "secondary": "#00eefc",
+          "surface-dim": "#121318",
+          "on-surface-variant": "#9ba1ad",
+          "inverse-surface": "#e3e1e9",
+          "surface-container-low": "#1a1b20",
+          "on-error": "#ffffff",
+          "on-error-container": "#ffdad6",
+          "outline": "#2d2e35",
+          "surface-bright": "#2d2e35",
+          "surface-container-high": "#222329",
+          "surface-container-lowest": "#0d0e13",
+          "outline-variant": "#2d2e35",
+          "primary-fixed": "#ffdbce",
+          "on-primary-fixed": "#370e00",
+          "tertiary-fixed-dim": "#ffba20",
+          "surface-container": "#1a1b20",
+          "error-container": "#93000a",
+          "tertiary-container": "#c08a00",
+          "secondary-container": "#00363a",
+          "on-surface": "#ffffff",
+          "on-tertiary-container": "#3c2900",
+          "on-secondary-container": "#00eefc",
+          "surface-container-highest": "#292a31",
+          "inverse-on-surface": "#2f3036",
+          "error": "#ff5252",
+          "surface-tint": "#ff5e00",
+          "on-secondary": "#00363a",
+          "surface": "#121318",
+          "on-tertiary": "#412d00",
+          "on-background": "#ffffff",
+          "on-secondary-fixed": "#002022",
+          "tertiary": "#ffba20",
+          "primary": "#ff5e00",
+          "primary-fixed-dim": "#ffb599"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "margin": "2rem",
+          "margin-mobile": "1rem",
+          "space-lg": "1.5rem",
+          "gutter": "1.5rem",
+          "space-xs": "0.25rem",
+          "space-xl": "2.5rem",
+          "space-md": "1rem",
+          "gutter-mobile": "0.75rem"
+        },
+        "fontFamily": {
+          "body-md": [
+            "Space Grotesk"
+          ],
+          "body-sm": [
+            "Space Grotesk"
+          ],
+          "label-sm": [
+            "JetBrains Mono"
+          ],
+          "headline-lg-mobile": [
+            "Space Grotesk"
+          ],
+          "label-lg": [
+            "JetBrains Mono"
+          ],
+          "headline-xl-mobile": [
+            "Space Grotesk"
+          ],
+          "body-lg": [
+            "Space Grotesk"
+          ],
+          "headline-xl": [
+            "Space Grotesk"
+          ],
+          "headline-md": [
+            "Space Grotesk"
+          ],
+          "headline-sm": [
+            "Space Grotesk"
+          ],
+          "telemetry-num": [
+            "JetBrains Mono"
+          ],
+          "label-md": [
+            "JetBrains Mono"
+          ],
+          "headline-lg": [
+            "Space Grotesk"
+          ]
+        },
+        "fontSize": {
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "22px",
+              "fontWeight": "400"
+            }
+          ],
+          "body-sm": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "400"
+            }
+          ],
+          "label-sm": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg-mobile": [
+            "26px",
+            {
+              "lineHeight": "34px",
+              "fontWeight": "700"
+            }
+          ],
+          "label-lg": [
+            "14px",
+            {
+              "lineHeight": "18px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "fontWeight": "700"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "26px",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "48px",
+            {
+              "lineHeight": "56px",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "fontWeight": "600"
+            }
+          ],
+          "telemetry-num": [
+            "28px",
+            {
+              "lineHeight": "32px",
+              "fontWeight": "700"
+            }
+          ],
+          "label-md": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }
+</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#0d0e13;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-[#0d0e13] font-body-md text-white antialiased min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-[#0d0e13]/90 backdrop-blur-xl border-b border-[#2d2e35] shadow-[0_1px_8px_rgba(0,0,0,0.6)]"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><img alt="GameTournament Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1V7DShShH3wL1jJceXJtzzeY0TwSuXpiyykafd5kuMjftaKwDP6P5jCZiNfe4myYnj51hkpDG1zqkEMrYxTzgnenTSHEskj3NHqpnV6PUvUhT_HAqaiRUw3XhrtNb5r9wQP9O6KQE4uTz1xSuDdb2BPhQf938O_UDOXmkMVWg1d_Yh7tD-L9HV2xwvwS7Maqgk__QUAKA9oytIjLwKjDMPn2GgIhKM2oNClvIcqLpsP"/><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-[#ff5e00] uppercase tracking-widest truncate">GameTournament</span><h1 class="font-headline-sm text-headline-sm text-white uppercase tracking-tight truncate leading-none">Validación</h1></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notificaciones" class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-white hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span></button><button aria-label="Perfil de jugador" class="w-11 h-11 flex items-center justify-center" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-[#ff5e00]/50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA66Q_DTHhRP4ZgIskfvddKbnbXFpcFXZx3liRkmi7shJS37HaJa-b_K7rFjWI0xrl79uVOFy2lO31x7dqamYngzt2BEhg8Ta0LJTzgUteGrc00ImrCFPDIktPadcsas3AZdcpSlq5VsPlmsWE38RYWPU1Z8ky5z2BKRH8hupXtN_uxH3i6bPPLGJzYL6Zgy2LdpfjhWBUyZBbcBXKmrHFtJTXpBXbnBvJsQVHjXck"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-[#0d0e13] px-margin-mobile"><div class="flex flex-col w-full gap-space-md mt-4">
+<!-- Audit Context Banner -->
+<div class="flex flex-col gap-space-xs bg-[#121318] p-space-md rounded-xl border border-[#2d2e35] shadow-md">
+<div class="flex items-center justify-between gap-space-sm flex-wrap">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-[#ff5e00] shadow-[0_0_8px_#ff5e00] animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-[#ff5e00] uppercase tracking-widest font-bold">MÓDULO DE ARBITRAJE Y TELEMETRÍA</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-sm py-0.5 rounded bg-[#1a1b20] border border-[#2d2e35] text-on-surface-variant font-medium">Gran Final • Mapa 3 (Bind)</span>
+</div>
+<!-- Player & Match Targeted Card -->
+<div class="mt-space-xs flex items-center justify-between bg-[#1a1b20] p-space-sm rounded-lg border border-[#2d2e35]">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative w-11 h-11 flex-shrink-0 rounded-lg overflow-hidden bg-[#222329] border border-[#2d2e35]">
+<img class="w-full h-full object-cover" data-alt="A focused young professional esports player with gaming headset bathed in intense cyan and violet arena neon stage lighting, high contrast cyber styling with intense tactical gaze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtOLYJXlmjIUYC9EqwQDKeOAmHDKKcPoL2I3oZQ8jXGjeoSLulQZ6g9LEWOqUiPq9gNoxRY1heIOt9D3fPc_HT7fZQvGQcSwsAZyGV4W2iolUp8dhFApoaN32aaTGdE0nqbspDf4Z2z1QYq2wsROWUP-LCp2DA_BKzMl3eGT9JZIfChISI8UeRh2lg1D7Qjy0L1xBiT5iroXlN0luvyMbbJDd77jgXqK5gCA9KtyY"/>
+<div class="absolute bottom-0 right-0 bg-[#ff5e00] text-black font-label-sm text-[9px] px-1 font-bold leading-none py-0.5">#09</div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-white tracking-tight truncate leading-tight font-bold">Nicolás "Shadow" Vega</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Cyber-Ninjas vs. Apex Void</span>
+</div>
+</div>
+<button aria-label="Cambiar jugador o enfrentamiento" class="w-10 h-10 flex items-center justify-center rounded-lg bg-[#222329] text-[#ff5e00] border border-[#2d2e35] hover:bg-[#2d2e35] hover:scale-105 active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">swap_horiz</span>
+</button>
+</div>
+</div>
+<!-- Warning / Inconsistency Callout Banner -->
+<div class="bg-[#1f1315] rounded-xl p-space-md shadow-md flex gap-space-sm relative overflow-hidden border border-[#ff5252]/30">
+<div class="w-1.5 absolute left-0 top-0 bottom-0 bg-[#ff5252]"></div>
+<div class="flex-shrink-0 text-[#ff5252] mt-0.5">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-label-sm text-label-sm font-bold text-[#ff5252] tracking-wider uppercase">2 Discrepancias en Acta</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-[#ff5252]/20 text-[#ff5252] border border-[#ff5252]/40 uppercase font-semibold">Pendiente de resolución</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+        Inconsistencias detectadas entre el registro de API del servidor del juego y la planilla del árbitro de sala (Head Referee).
+      </p>
+</div>
+</div>
+<!-- Comparative Correction Blocks -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-space-xs">
+<span class="font-label-md text-label-md text-white font-bold uppercase tracking-wider flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 bg-[#ff5e00] rounded-sm"></span>
+  Corrección Comparativa
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Acta Ref #ESPORT-9942</span>
+</div>
+<!-- Block 1: Eliminaciones -->
+<div class="bg-[#121318] rounded-xl p-space-md shadow-sm border border-[#2d2e35] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-[#ff5e00]">sports_score</span>
+<span class="font-headline-sm text-[16px] leading-tight text-white font-semibold">Eliminaciones en Ronda 14</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-[#1a1b20] border border-[#2d2e35] text-on-surface-variant">Pausa Técnica / Rollback</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="flex flex-col bg-[#1a1b20] p-space-sm rounded-lg border border-[#2d2e35]">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Servidor (API)</span>
+<span class="font-telemetry-num text-telemetry-num text-on-surface-variant/40 line-through tracking-wider">18</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 mt-1">Kill no registrada por lag</span>
+</div>
+<div class="flex flex-col bg-[#222329] p-space-sm rounded-lg relative overflow-hidden border border-[#ff5e00]/30">
+<div class="absolute -right-4 -top-4 w-12 h-12 bg-[#ff5e00]/10 rounded-full blur-md"></div>
+<span class="font-label-sm text-label-sm text-white uppercase font-bold flex items-center justify-between">
+            Árbitro
+            <span class="material-symbols-outlined text-[14px] text-[#ff5e00]">verified</span>
+</span>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-telemetry-num text-telemetry-num text-[#ff5e00] tracking-wider drop-shadow-[0_0_8px_rgba(255,94,0,0.4)]">19</span>
+<span class="font-label-sm text-label-sm text-[#00ff88] font-bold">+1 Kill</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1 truncate">Confirmada en replay</span>
+</div>
+</div>
+</div>
+<!-- Block 2: Equipamiento / Arma -->
+<div class="bg-[#121318] rounded-xl p-space-md shadow-sm border border-[#2d2e35] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-[#ff5e00]">military_tech</span>
+<span class="font-headline-sm text-[16px] leading-tight text-white font-semibold">Arma Usada en Ronda Decisiva</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-[#1a1b20] border border-[#2d2e35] text-on-surface-variant">Cómputo Económico</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="flex flex-col bg-[#1a1b20] p-space-sm rounded-lg border border-[#2d2e35]">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Servidor (API)</span>
+<span class="font-body-md text-body-md text-on-surface-variant/40 line-through font-semibold pt-1">Vandal (Rifle)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 mt-1">Costo: 2,900 creds</span>
+</div>
+<div class="flex flex-col bg-[#222329] p-space-sm rounded-lg border border-[#2d2e35]">
+<span class="font-label-sm text-label-sm text-white uppercase font-bold flex items-center justify-between">
+            Árbitro
+            <span class="material-symbols-outlined text-[14px] text-[#ff5e00]">check_circle</span>
+</span>
+<span class="font-body-md text-body-md text-white font-bold pt-1">Operator</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Costo real: 4,700 creds</span>
+</div>
+</div>
+</div>
+<!-- Block 3: Penalización -->
+<div class="bg-[#121318] rounded-xl p-space-md shadow-sm border border-[#2d2e35] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-[#ff5252]">flag</span>
+<span class="font-headline-sm text-[16px] leading-tight text-white font-semibold">Pausa Táctica Indebida</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-[#ff5252]/10 border border-[#ff5252]/30 text-[#ff5252]">Art. 8.2 Disciplina</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<div class="flex flex-col bg-[#1a1b20] p-space-sm rounded-lg border border-[#2d2e35]">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Servidor (API)</span>
+<span class="font-body-md text-body-md text-on-surface-variant font-medium pt-1">Sin sanción</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/70 mt-1">Registro por defecto</span>
+</div>
+<div class="flex flex-col bg-[#222329] p-space-sm rounded-lg border border-[#ff5252]/30">
+<span class="font-label-sm text-label-sm text-[#ff5252] uppercase font-bold flex items-center justify-between">
+            Árbitro
+            <span class="material-symbols-outlined text-[14px] text-[#ff5252]">warning</span>
+</span>
+<span class="font-body-md text-body-md text-[#ff5252] font-bold pt-1">Advertencia Nvl 1</span>
+<span class="font-label-sm text-label-sm text-[#ff5252]/80 mt-1">-1 punto conducta</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Evidence & Justification Section -->
+<div class="bg-[#121318] rounded-xl p-space-md shadow-sm border border-[#2d2e35] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-white uppercase tracking-wider flex items-center gap-space-xs font-bold">
+<span class="material-symbols-outlined text-[16px] text-[#ff5e00]">article</span>
+        Motivo y Respaldo Oficial
+      </span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-[#ff5252]/20 border border-[#ff5252]/40 text-[#ff5252] uppercase font-bold">Obligatorio</span>
+</div>
+<!-- Justification card (simulating official referee log entry) -->
+<div class="bg-[#1a1b20] rounded-lg p-space-sm flex flex-col gap-space-xs border border-[#2d2e35]">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-[#ff5e00]">videocam</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-white font-medium">VOD Minuto 42:15 • Transmisión Principal</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+        Revisión cuadro por cuadro en feed oficial de transmisión (VOD minuto 42:15). Se confirma kill registrada durante microdesconexión del observador. Aprobado por árbitro en cabina Marc Silva.
+      </p>
+</div>
+<!-- Media Attachment Row -->
+<div class="flex items-center justify-between bg-[#1a1b20] p-space-sm rounded-lg border border-[#2d2e35]">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded bg-[#222329] border border-[#2d2e35] flex items-center justify-center text-[#ff5e00] flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">smart_display</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-white truncate font-semibold">Clip_Evidencia_Round14_VOD.mp4</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">48.2 MB • Atestado de video</span>
+</div>
+</div>
+<button aria-label="Reproducir clip de prueba" class="w-9 h-9 flex items-center justify-center rounded-lg bg-[#222329] border border-[#2d2e35] text-[#ff5e00] hover:bg-[#2d2e35] active:scale-95 transition-all flex-shrink-0" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Summary of Changes Box -->
+<div class="bg-[#121318] rounded-xl p-space-md shadow-md border border-[#2d2e35] flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-white uppercase tracking-tight font-bold">Resumen de Cómputo Final</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-[#ff5e00]/20 border border-[#ff5e00]/40 text-[#ff5e00] font-bold">ESPORTS AUDIT</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs pt-space-xs text-center">
+<div class="bg-[#1a1b20] p-space-sm rounded-lg flex flex-col justify-center border border-[#2d2e35]">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">KDA Ajustado</span>
+<span class="font-label-md text-label-md text-[#ff5e00] font-bold mt-1 tracking-tight">19/8/6</span>
+<span class="font-label-sm text-[9px] text-on-surface-variant/60 line-through">18/8/6</span>
+</div>
+<div class="bg-[#1a1b20] p-space-sm rounded-lg flex flex-col justify-center border border-[#2d2e35]">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Circuit Pts</span>
+<span class="font-label-md text-label-md text-tertiary-fixed-dim font-bold mt-1">+45 pts</span>
+<span class="font-label-sm text-[9px] text-tertiary-fixed-dim/70">Oficiales</span>
+</div>
+<div class="bg-[#1a1b20] p-space-sm rounded-lg flex flex-col justify-center border border-[#2d2e35]">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Disciplina</span>
+<span class="font-label-md text-label-md text-[#ff5252] font-bold mt-1">1 Leve</span>
+<span class="font-label-sm text-[9px] text-on-surface-variant/70">Historial +1</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[15px] text-[#ff5e00]">verified_user</span>
+<span class="font-label-sm text-label-sm">Árbitro: Carlos "RefMaster" Ortiz</span>
+</div>
+<span class="font-label-sm text-label-sm font-medium">Hace 8 min</span>
+</div>
+</div>
+<!-- Primary and Secondary Actions -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full h-13 py-3 px-space-md rounded-xl bg-[#ff5e00] text-black font-headline-sm text-[16px] font-bold uppercase tracking-wider shadow-[0_0_20px_rgba(255,94,0,0.45)] hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-space-sm" id="btn-confirm-audit" type="button">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+      Confirmar y Aplicar al Marcador
+    </button>
+<button class="w-full h-11 py-2 px-space-md rounded-xl bg-[#1a1b20] border border-[#2d2e35] text-on-surface-variant hover:text-white hover:bg-[#222329] active:scale-[0.98] transition-all font-label-md text-label-md font-semibold uppercase tracking-wider flex items-center justify-center gap-space-xs" id="btn-discard-audit" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+      Descartar / Mantener Servidor
+    </button>
+</div>
+<!-- Collapsible Resolution History Card -->
+<div class="bg-[#121318] rounded-xl p-space-md shadow-sm border border-[#2d2e35] flex flex-col gap-space-xs transition-all mb-space-md">
+<button class="w-full flex items-center justify-between text-left py-0.5" id="btn-toggle-resolutions" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">history</span>
+<span class="font-label-md text-label-md text-white font-semibold uppercase tracking-wide">Últimas Resoluciones Aprobadas</span>
+<span class="font-label-sm text-label-sm px-1.5 rounded-full bg-[#1a1b20] border border-[#2d2e35] text-on-surface-variant">3</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant transition-transform duration-300" id="resolutions-chevron">expand_more</span>
+</button>
+<div class="hidden flex flex-col gap-space-xs pt-space-xs" id="resolutions-content">
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-[#1a1b20] border border-[#2d2e35]">
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-white font-medium truncate">#ESPORT-9941 • Ajuste de daño por molotov</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cyber-Ninjas vs. Apex Void • Aprobado</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#ffba20] font-bold flex-shrink-0">Ronda 9</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-[#1a1b20] border border-[#2d2e35]">
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-white font-medium truncate">#ESPORT-9940 • Defuse tick con bug visual</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sentinels Latam vs. K-Force • Válido</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#ffba20] font-bold flex-shrink-0">Mapa 2</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-lg bg-[#1a1b20] border border-[#2d2e35]">
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm text-white font-medium truncate">#ESPORT-9938 • Anulación de muerte por desconexión host</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Titanium Gaming • Replay aplicado</span>
+</div>
+<span class="font-label-sm text-label-sm text-[#ffba20] font-bold flex-shrink-0">Ronda 4</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    const toggleBtn = document.getElementById('btn-toggle-resolutions');
+    const content = document.getElementById('resolutions-content');
+    const chevron = document.getElementById('resolutions-chevron');
+
+    if (toggleBtn && content && chevron) {
+      toggleBtn.addEventListener('click', function() {
+        const isHidden = content.classList.contains('hidden');
+        if (isHidden) {
+          content.classList.remove('hidden');
+          chevron.style.transform = 'rotate(180deg)';
+        } else {
+          content.classList.add('hidden');
+          chevron.style.transform = 'rotate(0deg)';
+        }
+      });
+    }
+
+    const confirmBtn = document.getElementById('btn-confirm-audit');
+    if (confirmBtn) {
+      confirmBtn.addEventListener('click', function() {
+        confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">sync</span> Procesando acta...';
+        confirmBtn.classList.add('opacity-80', 'pointer-events-none');
+        setTimeout(function() {
+          confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">task_alt</span> ¡Marcador Oficial Sincronizado!';
+          confirmBtn.classList.remove('bg-[#ff5e00]', 'text-black');
+          confirmBtn.classList.add('bg-[#1a1b20]', 'text-[#00ff88]', 'border', 'border-[#00ff88]/40');
+        }, 1200);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-[#0d0e13]/95 backdrop-blur-xl border-t border-[#2d2e35] shadow-[0_-1px_12px_rgba(0,0,0,0.6)]"><div class="flex justify-around items-center h-16 px-gutter-mobile"><a class="flex flex-col items-center justify-center gap-space-xs min-w-[72px] h-12 text-on-surface-variant hover:text-white transition-colors" data-path="estadisticas" href="#"><span class="material-symbols-outlined text-[24px]">query_stats</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Estadísticas</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[72px] h-12 text-on-surface-variant hover:text-white transition-colors" data-path="usuarios" href="#"><span class="material-symbols-outlined text-[24px]">group</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Usuarios</span></a><a class="flex flex-col items-center justify-center gap-space-xs min-w-[72px] h-12 text-[#ff5e00] font-semibold transition-colors" data-path="validacion" href="#"><span class="material-symbols-outlined text-[24px]">fact_check</span><span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Validación</span></a></div></nav></body></html>
