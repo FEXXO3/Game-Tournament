@@ -1,0 +1,309 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+<meta content="mobile_stack" name="shell-type">
+<title>RF-M01-03 Recuperación de Contraseña - GameTournament</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700&amp;family=Sora:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-tertiary-fixed-variant": "#5e4200", "inverse-primary": "#a63b00", "on-secondary": "#00363a", "primary-fixed": "#ffdbce", "surface-container": "#1e1f25", "secondary-fixed-dim": "#00dbe9", "outline-variant": "#5b4137", "on-secondary-container": "#00686f", "on-tertiary-fixed": "#271900", "on-secondary-fixed": "#002022", "on-surface": "#e3e1e9", "on-primary-container": "#531900", "surface-container-high": "#292a2f", "surface-container-low": "#1a1b20", "inverse-on-surface": "#2f3036", "surface-variant": "#34343a", "on-surface-variant": "#e4bfb1", tertiary: "#ffba20", "on-tertiary-container": "#3c2900", "tertiary-container": "#c08a00", "tertiary-fixed": "#ffdea8", "error-container": "#93000a", "surface-bright": "#38393e", primary: "#ffb599", error: "#ffb4ab", "on-primary-fixed": "#370e00", "on-tertiary": "#412d00", "on-background": "#e3e1e9", "surface-container-highest": "#34343a", "on-primary": "#5a1c00", "secondary-fixed": "#7df4ff", "on-secondary-fixed-variant": "#004f54", background: "#121318", "surface-dim": "#121318", "inverse-surface": "#e3e1e9", secondary: "#d3fbff", "surface-container-lowest": "#0d0e13", "primary-container": "#ff5e00", "on-error": "#690005", "on-primary-fixed-variant": "#7f2b00", outline: "#ab897d", surface: "#121318", "surface-tint": "#ffb599", "primary-fixed-dim": "#ffb599", "tertiary-fixed-dim": "#ffba20", "on-error-container": "#ffdad6", "secondary-container": "#00eefc"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, fontFamily: {"headline-xl": ["Sora", "sans-serif"], "headline-lg": ["Sora", "sans-serif"], "headline-md": ["Sora", "sans-serif"], "headline-sm": ["Sora", "sans-serif"], "body-lg": ["Manrope", "sans-serif"], "body-md": ["Manrope", "sans-serif"], "body-sm": ["Manrope", "sans-serif"], "label-lg": ["JetBrains Mono", "monospace"], "label-md": ["JetBrains Mono", "monospace"], "label-sm": ["JetBrains Mono", "monospace"], headline: ["Space Grotesk"], display: ["Space Grotesk"], body: ["Geist"], label: ["Space Grotesk"]}, fontSize: {}}}};</script>
+<style>
+  @layer base {
+    html, body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background-color: #0f131e;
+    }
+    body {
+      overscroll-behavior-y: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .pb-safe { padding-bottom: env(safe-area-inset-bottom, 16px); }
+    .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+  }
+  ::-webkit-scrollbar { display: none; }
+</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#121318] text-[#e3e1e9] font-body-md text-sm min-h-screen flex flex-col antialiased selection:bg-[#ff5e00]/25 selection:text-[#ffdbce]">
+<!-- Top Bar / Header -->
+<header class="fixed top-0 inset-x-0 z-50 border-b border-[#292a2f] pt-safe bg-[#121318]"><!-- Status Bar Simulation -->
+<div class="h-6 px-4 flex items-center justify-between text-[#ab897d] font-label-sm text-[11px]">
+<span class="font-semibold tracking-wider text-[#e3e1e9]">09:41</span>
+<div class="flex items-center gap-2">
+<span class="text-[9px] px-1.5 py-0.2 rounded bg-[#1a1b20] border border-[#292a2f] text-[#ff7a00] font-bold tracking-widest">ESPORTS NET</span>
+<span class="material-symbols-outlined text-[13px] text-[#ff7a00]">wifi</span>
+<span class="material-symbols-outlined text-[14px] text-emerald-400">battery_full</span>
+</div>
+</div>
+<!-- App Navigation Header -->
+<div class="h-14 px-4 flex items-center justify-between max-w-[440px] mx-auto w-full">
+<div class="flex items-center gap-2.5">
+<button aria-label="Volver" class="w-9 h-9 rounded-lg border border-[#292a2f] bg-[#1a1b20] flex items-center justify-center text-[#ab897d] hover:border-[#ff5e00]/50 hover:text-[#ffb599] active:scale-95 transition-all" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-gradient-to-br from-[#ff5e00] to-[#a63b00] p-[1px] shadow-[0_0_12px_rgba(255,94,0,0.35)] flex items-center justify-center">
+<div class="w-full h-full bg-[#121318] rounded-[7px] flex items-center justify-center">
+<span class="material-symbols-outlined text-[#ff7a00] text-[16px]">sports_esports</span>
+</div>
+</div>
+<div class="flex flex-col leading-tight">
+<span class="font-headline-sm text-xs tracking-wider uppercase font-bold text-[#e3e1e9]">Game<span class="text-[#ff5e00]">Tournament</span></span>
+<span class="font-label-sm text-[9px] text-[#ab897d] tracking-widest uppercase">Seguridad de Cuenta</span>
+</div>
+</div>
+</div>
+<div class="flex items-center">
+<span class="font-label-sm text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full border border-[#ff5e00]/30 bg-[#ff5e00]/10 text-[#ffb599] font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-[#ff5e00] animate-pulse shadow-[0_0_6px_#ff5e00]"></span>
+          FASE SEGURIDAD
+        </span>
+</div>
+</div></header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col relative w-full max-w-[440px] mx-auto px-4 pt-24 pb-8 pb-safe bg-[#121318]">
+<!-- Ambient Cyber Glow Overlay -->
+
+<div class="relative flex flex-col w-full z-10"><!-- Hero Badge & Title -->
+<div class="flex flex-col items-center text-center mt-2 mb-6">
+<div class="relative w-20 h-20 mb-3.5">
+<!-- Outer Pulsing Kinetic Glow -->
+
+<!-- Shield Frame -->
+<div class="relative w-full h-full rounded-2xl bg-gradient-to-b from-[#292a2f] to-[#1a1b20] border border-[#ff5e00]/40 p-[1.5px] shadow-[0_8px_30px_rgba(0,0,0,0.65)] flex items-center justify-center">
+<div class="w-full h-full rounded-[14px] bg-[#1a1b20] flex items-center justify-center relative overflow-hidden">
+<div class="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#ff5e00] to-transparent"></div>
+<span class="material-symbols-outlined text-[#ff7a00] text-[36px]" style="font-variation-settings: &quot;FILL&quot; 1;">lock_reset</span>
+</div>
+</div>
+<!-- Verified Floating Badge -->
+<div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-md bg-[#1a1b20] border border-emerald-400 text-emerald-400 flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">security</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#1a1b20] border border-[#292a2f] text-[#ab897d] font-label-sm text-[10px] uppercase tracking-wider mb-2">
+<span class="w-1.5 h-1.5 rounded-full bg-[#ff5e00] shadow-[0_0_6px_#ff5e00]"></span>
+          Apex Shield • Recuperación de Cuenta
+        </div>
+<h1 class="font-headline-lg text-[22px] font-bold text-[#e3e1e9] tracking-tight leading-tight mb-1.5">
+          ¿Olvidaste tu contraseña?
+        </h1>
+<p class="font-body-md text-[#ab897d] text-xs max-w-[320px] leading-relaxed">
+          No pierdas tu puesto en el bracket. Selecciona cómo restablecer tu clave de acceso.
+        </p>
+</div>
+<!-- Options / Method Selection Section -->
+<div class="space-y-2.5 mb-5">
+<div class="flex items-center justify-between px-0.5">
+<span class="font-headline-sm text-xs font-bold text-[#e3e1e9] tracking-wider uppercase flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#ff5e00] shadow-[0_0_6px_#ff5e00]"></span>
+            Método de entrega del código
+          </span>
+<span class="font-label-sm text-[10px] text-[#ff7a00] font-semibold tracking-wider">PASO 01 / 02</span>
+</div>
+<!-- Option 1: Email (Selected by default) -->
+<button class="w-full text-left p-3.5 rounded-xl bg-[#1e1f25] border-2 border-[#ff5e00] shadow-[0_4px_24px_rgba(255,94,0,0.22)] transition-all relative overflow-hidden group flex items-start gap-3" id="opt-email" onclick="selectRecoveryMethod('email')" type="button">
+<div class="absolute inset-0 bg-[#ff5e00]/[0.04] pointer-events-none"></div>
+<!-- Radio Icon Indicator -->
+<div class="w-5 h-5 mt-0.5 rounded-full border-2 border-[#ff5e00] bg-[#ff5e00] flex items-center justify-center shrink-0 transition-colors shadow-sm" id="radio-email">
+<div class="w-2 h-2 rounded-full bg-[#121318]"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-headline-sm text-xs font-bold text-[#e3e1e9]">Correo electrónico registrado</span>
+<span class="px-2 py-0.5 rounded-full border border-emerald-500/40 bg-emerald-500/10 text-emerald-300 font-label-sm text-[9px] font-bold tracking-wider uppercase shrink-0">RECOMENDADO</span>
+</div>
+<p class="font-body-sm text-[11px] text-[#ab897d] mb-2 leading-tight">Enlace seguro de restablecimiento con un solo clic</p>
+<div class="flex items-center gap-1.5 py-1 px-2.5 rounded-lg bg-[#121318] border border-[#292a2f] text-[#ffb599] font-label-md text-xs">
+<span class="material-symbols-outlined text-[14px] text-[#ff7a00]">mail</span>
+<span class="font-semibold truncate text-[#ffdbce]">vortex@gametournament.gg</span>
+</div>
+</div>
+</button>
+<!-- Option 2: SMS Mobile -->
+<button class="w-full text-left p-3.5 rounded-xl bg-[#1a1b20] border border-[#292a2f] hover:border-[#5b4137] transition-all relative overflow-hidden group flex items-start gap-3" id="opt-sms" onclick="selectRecoveryMethod('sms')" type="button">
+<!-- Radio Icon Indicator -->
+<div class="w-5 h-5 mt-0.5 rounded-full border-2 border-[#ab897d] bg-transparent flex items-center justify-center shrink-0 transition-colors" id="radio-sms">
+<div class="w-2 h-2 rounded-full bg-transparent"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-headline-sm text-xs font-bold text-[#e3e1e9]">Mensaje SMS / Móvil</span>
+<span class="px-2 py-0.5 rounded-full border border-[#292a2f] bg-[#1e1f25] text-[#ab897d] font-label-sm text-[9px] font-semibold tracking-wider uppercase shrink-0">SMS RÁPIDO</span>
+</div>
+<p class="font-body-sm text-[11px] text-[#ab897d] mb-2 leading-tight">PIN numérico temporal de 6 dígitos vía SMS</p>
+<div class="flex items-center gap-1.5 py-1 px-2.5 rounded-lg bg-[#121318] border border-[#292a2f] text-[#ab897d] font-label-md text-xs">
+<span class="material-symbols-outlined text-[14px] text-[#ab897d]">smartphone</span>
+<span class="font-semibold text-[#ab897d] tracking-wider">+52 ••• ••• 42</span>
+</div>
+</div>
+</button>
+</div>
+<!-- Recovery Input Form -->
+<form class="space-y-4" id="recovery-form" onsubmit="handleRecoverySubmit(event)">
+<!-- Dynamic Input Field -->
+<div class="space-y-1.5">
+<div class="flex items-center justify-between px-0.5">
+<label class="font-headline-sm text-xs font-semibold text-[#e3e1e9]" for="recovery-input" id="input-label">
+              Confirmar correo electrónico
+            </label>
+<span class="font-label-sm text-[10px] text-[#ab897d]" id="input-tag">ID de Jugador</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-[#ff7a00] text-[18px] pointer-events-none" id="input-icon">alternate_email</span>
+<input class="w-full h-11 pl-9 pr-10 rounded-xl bg-[#1a1b20] border border-[#292a2f] text-[#e3e1e9] font-label-md text-xs placeholder:text-[#ab897d] focus:outline-none focus:border-[#ff5e00] focus:ring-1 focus:ring-[#ff5e00]/30 shadow-inner transition-all" id="recovery-input" placeholder="vortex@gametournament.gg" required="" type="email" value="vortex@gametournament.gg">
+<button class="absolute right-2.5 w-6 h-6 rounded flex items-center justify-center text-[#ab897d] hover:text-[#e3e1e9] transition-colors" id="clear-btn" onclick="clearInputField()" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+</div>
+<!-- Security & Anti-Cheat Info Card -->
+<div class="p-3 rounded-xl bg-[#1a1b20] border border-[#292a2f] flex items-start gap-3">
+<div class="w-8 h-8 rounded-lg bg-[#ff5e00]/10 border border-[#ff5e00]/30 flex items-center justify-center shrink-0 text-[#ff7a00]">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+</div>
+<div class="flex-1 leading-snug">
+<div class="flex items-center justify-between gap-1 mb-0.5">
+<span class="font-headline-sm text-[11px] font-bold text-[#e3e1e9] uppercase tracking-wider">Vigencia de 15 minutos</span>
+<span class="font-label-sm text-[9px] text-emerald-400 font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[11px]">verified_user</span> SSL 256-BIT
+              </span>
+</div>
+<p class="font-body-sm text-[11px] text-[#ab897d]">
+              Protección de integridad de partida activa. Los enlaces caducan automáticamente tras el período de espera.
+            </p>
+</div>
+</div>
+<!-- Main Full-Width CTA Button -->
+<button class="w-full h-12 rounded-xl bg-gradient-to-r from-[#ff5e00] to-[#ff7a00] text-[#271900] font-headline-sm font-bold text-xs uppercase tracking-wider shadow-[0_0_24px_rgba(255,94,0,0.45)] hover:shadow-[0_0_32px_rgba(255,94,0,0.65)] hover:brightness-110 active:scale-[0.99] transition-all flex items-center justify-center gap-2 group cursor-pointer" id="submit-btn" type="submit">
+<span class="tracking-wider font-extrabold" id="btn-text">ENVIAR CÓDIGO DE RECUPERACIÓN</span>
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-1 font-bold">arrow_forward</span>
+</button>
+</form>
+<!-- Bottom Secondary Navigation & Support -->
+<div class="mt-6 flex flex-col items-center text-center space-y-3">
+<a class="inline-flex items-center gap-1.5 font-label-md text-xs text-[#ffb599] hover:text-[#ffdbce] transition-colors py-1" href="#soporte-torneo">
+<span class="material-symbols-outlined text-[16px] text-[#ff7a00]">headset_mic</span>
+<span class="">Soporte técnico de torneos</span>
+</a>
+<div class="w-40 h-[1px] bg-[#292a2f]"></div>
+<button class="inline-flex items-center justify-center gap-1.5 py-1.5 px-4 rounded-lg text-[#ab897d] font-label-md text-xs hover:text-[#e3e1e9] hover:bg-[#1a1b20] active:scale-95 transition-all" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span class="">Volver a Iniciar Sesión</span>
+</button>
+</div>
+<!-- Toast Feedback Popup -->
+<div class="fixed bottom-6 left-1/2 -translate-x-1/2 max-w-[380px] w-[90%] p-3.5 rounded-xl bg-[#1e1f25] border border-[#ff5e00] text-[#e3e1e9] shadow-[0_12px_36px_rgba(0,0,0,0.8)] flex items-center gap-3 opacity-0 pointer-events-none transition-all duration-300 z-50" id="toast">
+<div class="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400 text-emerald-400 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-headline-sm text-xs font-bold text-[#e3e1e9]" id="toast-title">Código Despachado</p>
+<p class="font-body-sm text-[11px] text-[#ab897d] truncate" id="toast-desc">Revisa tu bandeja de entrada vinculada</p>
+</div>
+</div></div>
+</main>
+<script>
+    let currentMethod = 'email';
+
+    function selectRecoveryMethod(method) {
+      currentMethod = method;
+      const optEmail = document.getElementById('opt-email');
+      const optSms = document.getElementById('opt-sms');
+      const radioEmail = document.getElementById('radio-email');
+      const radioSms = document.getElementById('radio-sms');
+      const label = document.getElementById('input-label');
+      const tag = document.getElementById('input-tag');
+      const input = document.getElementById('recovery-input');
+      const icon = document.getElementById('input-icon');
+
+      if (method === 'email') {
+        optEmail.className = "w-full text-left p-3.5 rounded-xl bg-[#1b1f2b] border-2 border-[#00f0ff] shadow-[0_4px_24px_rgba(0,240,255,0.18)] transition-all relative overflow-hidden group flex items-start gap-3";
+        optSms.className = "w-full text-left p-3.5 rounded-xl bg-[#171b26] border border-[#262a35] hover:border-[#3b494b] transition-all relative overflow-hidden group flex items-start gap-3";
+        
+        radioEmail.className = "w-5 h-5 mt-0.5 rounded-full border-2 border-[#00f0ff] bg-[#00f0ff] flex items-center justify-center shrink-0 transition-colors shadow-sm";
+        radioEmail.innerHTML = '<div class="w-2 h-2 rounded-full bg-[#0f131e]"></div>';
+        
+        radioSms.className = "w-5 h-5 mt-0.5 rounded-full border-2 border-[#849495] bg-transparent flex items-center justify-center shrink-0 transition-colors";
+        radioSms.innerHTML = '<div class="w-2 h-2 rounded-full bg-transparent"></div>';
+
+        label.textContent = "Confirmar correo electrónico";
+        tag.textContent = "ID de Jugador";
+        input.type = "email";
+        input.value = "vortex@gametournament.gg";
+        input.placeholder = "vortex@gametournament.gg";
+        icon.textContent = "alternate_email";
+      } else {
+        optSms.className = "w-full text-left p-3.5 rounded-xl bg-[#1b1f2b] border-2 border-[#00f0ff] shadow-[0_4px_24px_rgba(0,240,255,0.18)] transition-all relative overflow-hidden group flex items-start gap-3";
+        optEmail.className = "w-full text-left p-3.5 rounded-xl bg-[#171b26] border border-[#262a35] hover:border-[#3b494b] transition-all relative overflow-hidden group flex items-start gap-3";
+
+        radioSms.className = "w-5 h-5 mt-0.5 rounded-full border-2 border-[#00f0ff] bg-[#00f0ff] flex items-center justify-center shrink-0 transition-colors shadow-sm";
+        radioSms.innerHTML = '<div class="w-2 h-2 rounded-full bg-[#0f131e]"></div>';
+
+        radioEmail.className = "w-5 h-5 mt-0.5 rounded-full border-2 border-[#849495] bg-transparent flex items-center justify-center shrink-0 transition-colors";
+        radioEmail.innerHTML = '<div class="w-2 h-2 rounded-full bg-transparent"></div>';
+
+        label.textContent = "Número móvil de seguridad";
+        tag.textContent = "SMS Registrado";
+        input.type = "tel";
+        input.value = "+52 55 1234 5642";
+        input.placeholder = "+52 ••• ••• 42";
+        icon.textContent = "smartphone";
+      }
+    }
+
+    function clearInputField() {
+      const input = document.getElementById('recovery-input');
+      input.value = '';
+      input.focus();
+    }
+
+    function handleRecoverySubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      const btnText = document.getElementById('btn-text');
+      const toast = document.getElementById('toast');
+      const toastTitle = document.getElementById('toast-title');
+      const toastDesc = document.getElementById('toast-desc');
+
+      btn.disabled = true;
+      btn.classList.add('opacity-80');
+      btnText.textContent = "GENERANDO CLAVE...";
+
+      setTimeout(() => {
+        btnText.textContent = "¡CÓDIGO TRANSMITIDO!";
+        btn.classList.remove('bg-[#00f0ff]');
+        btn.classList.add('bg-emerald-400');
+
+        if (currentMethod === 'email') {
+          toastTitle.textContent = "Enlace Despachado";
+          toastDesc.textContent = "Revisa vortex@gametournament.gg y spam";
+        } else {
+          toastTitle.textContent = "SMS Transmitido";
+          toastDesc.textContent = "Código PIN de 6 dígitos enviado a tu móvil";
+        }
+
+        toast.classList.remove('opacity-0', 'pointer-events-none');
+
+        setTimeout(() => {
+          toast.classList.add('opacity-0', 'pointer-events-none');
+          btn.disabled = false;
+          btn.classList.remove('bg-emerald-400', 'opacity-80');
+          btn.classList.add('bg-[#00f0ff]');
+          btnText.textContent = "ENVIAR CÓDIGO DE RECUPERACIÓN";
+        }, 3500);
+      }, 900);
+    }
+  </script>
+
+
+</body></html>
