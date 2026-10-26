@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#0c0e13;color:#e1e2e9;}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"inverse-surface": "#e1e2e9", "primary-fixed": "#ffdbce", error: "#ffb4ab", secondary: "#d3fbff", "secondary-fixed": "#7df4ff", "on-primary-fixed": "#370e00", "primary-container": "#ff5e00", "on-surface-variant": "#e4bfb1", "on-background": "#e1e2e9", "inverse-primary": "#a63b00", "surface-container-highest": "#32353a", "on-primary-fixed-variant": "#7f2b00", "on-error": "#690005", "inverse-on-surface": "#2e3035", tertiary: "#ffba20", "on-tertiary": "#412d00", outline: "#ab897d", "surface-container-high": "#272a2f", "on-surface": "#e1e2e9", "tertiary-fixed": "#ffdea8", "tertiary-container": "#c08a00", "surface-tint": "#ffb599", "on-secondary-fixed-variant": "#004f54", "surface-container-low": "#191c20", "outline-variant": "#5b4137", "surface-variant": "#32353a", surface: "#111318", "on-secondary": "#00363a", "on-error-container": "#ffdad6", "on-secondary-container": "#00686f", "tertiary-fixed-dim": "#ffba20", background: "#111318", "on-tertiary-fixed-variant": "#5e4200", "on-secondary-fixed": "#002022", "secondary-container": "#00eefc", "surface-dim": "#111318", "surface-container": "#1d2024", "surface-container-lowest": "#0c0e13", "error-container": "#93000a", primary: "#ffb599", "on-tertiary-container": "#3c2900", "on-primary": "#5a1c00", "primary-fixed-dim": "#ffb599", "surface-bright": "#37393e", "secondary-fixed-dim": "#00dbe9", "on-primary-container": "#531900", "on-tertiary-fixed": "#271900"}, borderRadius: {DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem"}, spacing: {"space-md": "1rem", "gutter-mobile": "0.75rem", "space-xl": "2.5rem", "space-xs": "0.25rem", "space-lg": "1.5rem", gutter: "1.25rem", "space-sm": "0.5rem", "margin-mobile": "1rem", margin: "2rem"}, fontFamily: {"body-md": ["Inter"], "body-sm": ["Inter"], "body-lg": ["Inter"], "label-lg": ["Space Grotesk"], "label-md": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "title-md": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "display-xl": ["Space Grotesk"], "display-xl-mobile": ["Space Grotesk"]}, fontSize: {"headline-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}], "headline-lg-mobile": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "700"}], "label-lg": ["14px", {lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600"}], "headline-sm": ["20px", {lineHeight: "28px", letterSpacing: "0em", fontWeight: "600"}], "title-md": ["16px", {lineHeight: "24px", letterSpacing: "0.02em", fontWeight: "600"}], "display-xl": ["56px", {lineHeight: "64px", letterSpacing: "-0.03em", fontWeight: "700"}], "label-sm": ["10px", {lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "700"}], "headline-md": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "600"}], "body-md": ["14px", {lineHeight: "22px", fontWeight: "400"}], "body-sm": ["12px", {lineHeight: "18px", fontWeight: "400"}], "body-lg": ["18px", {lineHeight: "28px", fontWeight: "400"}], "label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.06em", fontWeight: "600"}], "display-xl-mobile": ["36px", {lineHeight: "44px", letterSpacing: "-0.02em", fontWeight: "700"}]}}}};</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary selection:text-on-primary"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_4px_24px_rgba(0,0,0,0.6)]"><div class="h-16 px-4 flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Nexus Esports Logo" class="h-9 w-auto object-contain shrink-0 drop-shadow-[0_0_8px_rgba(208,188,255,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKQeaymLU2w4BoZXOA3cZ0pDAKMF9izjy8idkG_lS3DMS7mYWAw9AUvirpmAQJh40eVtV1O0i-1G5msiaAsyBQuyeDg4uMR7H_PpSlcs2Q2lJ3X4oBD00rhAwszzIzWGC_FpQ6IOdftdnW2NEzTnb7E2fnkklj27nX1lrDI-dvYWodFICXky0801LQ1eO7UKZQ6l0PKO7q86D-RBWvnqVUCnAXbZcq8dBRg80LzDBK"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary shadow-[0_0_8px_#4cd7f6] animate-pulse"></span><span class="font-label-md text-xs tracking-wider text-secondary uppercase font-bold truncate">APEX CUP - SEASON 4</span></div><h1 class="font-headline-sm text-lg text-white font-bold uppercase truncate tracking-tight">Posiciones</h1></div></div><div class="flex items-center gap-2 shrink-0"><button aria-label="Notificaciones" class="w-10 h-10 relative flex items-center justify-center rounded-lg bg-surface-container border border-outline-variant/40 text-on-surface-variant hover:text-primary hover:border-primary/50 transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error shadow-[0_0_6px_#ffb4ab]"></span></button><div class="w-9 h-9 rounded-lg bg-primary-container/20 border border-primary/30 flex items-center justify-center text-primary shadow-[0_0_12px_rgba(160,120,255,0.25)]"><span class="material-symbols-outlined text-[20px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-24 bg-background min-h-screen"><div class="flex flex-col w-full px-4 pb-space-xl gap-3">
+<!-- Tournament Overview Strip -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low border border-outline-variant/40 p-4 shadow-[0_8px_32px_rgba(0,0,0,0.5)] backdrop-blur-md">
+<div class="absolute -right-8 -top-8 w-36 h-36 bg-primary/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -left-10 bottom-0 w-32 h-32 bg-secondary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center justify-between gap-space-sm relative z-10">
+<div class="flex items-center gap-2 min-w-0">
+<span class="flex h-2 w-2 rounded-full bg-tertiary shadow-[0_0_8px_#4edea3]"></span>
+<span class="font-label-md text-xs font-semibold uppercase tracking-wider text-white truncate">Fase Regular • Sem 5</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-surface-container-lowest border border-tertiary/30 text-tertiary shadow-[0_0_12px_rgba(78,222,163,0.15)] shrink-0">
+<span class="material-symbols-outlined text-[15px] text-tertiary" style="font-variation-settings: 'FILL' 1;">monetization_on</span>
+<span class="font-label-md text-xs text-tertiary font-bold tracking-wider">$10,000 USD</span>
+</div>
+</div>
+<!-- Qualification Matrix Rule Legend -->
+<div class="grid grid-cols-3 gap-2 mt-3 pt-1 border-t border-outline-variant/30">
+<div class="flex items-center gap-2 bg-surface-container-lowest/80 border border-secondary/20 px-2.5 py-1.5 rounded-lg">
+<span class="w-1.5 h-4 rounded-full bg-secondary shadow-[0_0_6px_#4cd7f6] shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[10px] uppercase font-bold text-secondary truncate tracking-wider">Top 1-2</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Finals</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest/80 border border-primary/20 px-2.5 py-1.5 rounded-lg">
+<span class="w-1.5 h-4 rounded-full bg-primary shadow-[0_0_6px_#d0bcff] shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[10px] uppercase font-bold text-primary truncate tracking-wider">Puesto 3-4</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Repechaje</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest/80 border border-error/20 px-2.5 py-1.5 rounded-lg">
+<span class="w-1.5 h-4 rounded-full bg-error shadow-[0_0_6px_#ffb4ab] shrink-0"></span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-[10px] uppercase font-bold text-error truncate tracking-wider">Puesto 5-8</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant truncate">Eliminación</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Search & Filter Controls -->
+<div class="flex flex-col gap-2.5">
+<!-- Live Tactical Search Input -->
+<div class="relative w-full">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[18px] text-outline">search</span>
+</div>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/50 text-white placeholder:text-outline text-sm font-body-md pl-9 pr-8 py-2.5 rounded-lg focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all shadow-inner" id="standingsSearch" placeholder="Buscar equipo o roster..." type="text"/>
+<button class="absolute inset-y-0 right-0 pr-2.5 flex items-center text-outline hover:text-white hidden" id="clearSearch">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Segmented Tournament Tabs -->
+<div class="flex items-center p-1 bg-surface-container-lowest border border-outline-variant/30 rounded-xl overflow-x-auto no-scrollbar gap-1">
+<button class="group-tab flex-1 min-w-[76px] py-2 px-3 rounded-lg text-center transition-all bg-surface-container border border-primary/40 text-primary shadow-[0_0_12px_rgba(208,188,255,0.15)] flex items-center justify-center gap-1.5 font-bold" data-tab="A">
+<span class="font-label-md text-xs tracking-wider">GRUPO A</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_6px_#d0bcff]"></span>
+</button>
+<button class="group-tab flex-1 min-w-[76px] py-2 px-3 rounded-lg text-center transition-all text-on-surface-variant hover:text-white flex items-center justify-center gap-1" data-tab="B">
+<span class="font-label-md text-xs tracking-wider">GRUPO B</span>
+</button>
+<button class="group-tab flex-1 min-w-[76px] py-2 px-3 rounded-lg text-center transition-all text-on-surface-variant hover:text-white flex items-center justify-center gap-1" data-tab="C">
+<span class="font-label-md text-xs tracking-wider">GRUPO C</span>
+</button>
+<button class="group-tab flex-1 min-w-[88px] py-2 px-3 rounded-lg text-center transition-all text-on-surface-variant hover:text-white flex items-center justify-center gap-1" data-tab="PLAYOFFS">
+<span class="material-symbols-outlined text-[15px]">account_tree</span>
+<span class="font-label-md text-xs tracking-wider">BRACKET</span>
+</button>
+</div>
+</div>
+<!-- Table Telemetry Header -->
+<div class="flex items-center px-4 py-1.5 text-on-surface-variant/80 font-label-sm text-[11px] uppercase tracking-widest font-semibold">
+<div class="w-8 shrink-0">#</div>
+<div class="flex-1 min-w-0 pr-2">EQUIPO</div>
+<div class="grid grid-cols-4 w-36 text-center shrink-0">
+<span>PJ</span>
+<span>PG</span>
+<span>DIF</span>
+<span class="text-primary font-bold">PTS</span>
+</div>
+</div>
+<!-- Standings List (Accordion Cards) -->
+<div class="flex flex-col gap-2" id="standingsList">
+<!-- Team Rank #1 (Grand Finals) -->
+<div class="team-card overflow-hidden rounded-xl bg-surface-container-low border border-secondary/30 transition-all duration-200 shadow-[0_4px_16px_rgba(0,0,0,0.4)]" data-team="nova shock">
+<button class="accordion-trigger w-full flex items-center px-3.5 py-3 text-left transition-colors hover:bg-surface-container text-on-surface">
+<div class="flex items-center justify-center w-6 h-6 rounded bg-secondary/15 text-secondary font-label-md text-xs shrink-0 font-bold border border-secondary/30">
+          01
+        </div>
+<div class="w-1.5 h-7 rounded-full bg-secondary shadow-[0_0_8px_#4cd7f6] mx-2.5 shrink-0"></div>
+<div class="relative w-9 h-9 rounded-lg overflow-hidden shrink-0 bg-surface-container-high border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="High-tech esports team badge logo for Nova Shock with electric cyan and neon mint energetic lightning insignia on dark carbon fiber shield background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIo0FI8vEQPwQ-N5Nky2n1iEsOscC3bGD87Nui4Ep2s4paVmhWeIP4hWszo2-STIE09lmfa6-SrZo0Hk6AuxdzRDlqe6ECf7S47iRhjKit9RdMMT8gRO3MMxhdU8odVIOrYg2ucRezGM-krb1sQz5xoLslJuettfQ5CWR1CV5tYoS6qQNPVkc37OBX_os19Ne3gFQK4txA8ZKLoDnxBYZuJZP5FXEPnQIuIEdXW469"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1 ml-3 pr-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="font-headline-sm text-sm uppercase tracking-tight text-white font-bold truncate">Nova Shock</span>
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 drop-shadow-[0_0_6px_#4cd7f6]" title="Clasificado a Gran Final">verified</span>
+</div>
+<span class="font-label-sm text-[10px] text-secondary uppercase font-semibold tracking-wider">Gran Final</span>
+</div>
+<div class="grid grid-cols-4 w-36 text-center shrink-0 font-label-md text-xs font-medium">
+<span class="text-on-surface-variant self-center">5</span>
+<span class="text-secondary self-center font-bold">5</span>
+<span class="text-white self-center">+28</span>
+<span class="text-primary font-bold text-sm self-center drop-shadow-[0_0_8px_rgba(208,188,255,0.4)]">15</span>
+</div>
+</button>
+<!-- Expandable Details -->
+<div class="accordion-panel hidden px-4 pb-4 pt-2 bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Racha de Partidas (Últimas 5)</span>
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-[10px] font-bold">W</span>
+<span class="px-2 py-0.5 rounded bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-[10px] font-bold">W</span>
+<span class="px-2 py-0.5 rounded bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-[10px] font-bold">W</span>
+<span class="px-2 py-0.5 rounded bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-[10px] font-bold">W</span>
+<span class="px-2 py-0.5 rounded bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-[10px] font-bold">W</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-2.5 pt-2 bg-surface-container/60 border border-outline-variant/30 p-2.5 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Rondas Ganadas</span>
+<span class="font-label-md text-xs text-white font-medium">65 / 75 (86%)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">K/D General</span>
+<span class="font-label-md text-xs text-secondary font-bold">1.48 KDR</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Próx. Rival</span>
+<span class="font-label-md text-xs text-primary truncate font-semibold">Phantom (S6)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Team Rank #2 (Grand Finals) -->
+<div class="team-card overflow-hidden rounded-xl bg-surface-container-low border border-secondary/30 transition-all duration-200 shadow-[0_4px_16px_rgba(0,0,0,0.4)]" data-team="phantom eclipse">
+<button class="accordion-trigger w-full flex items-center px-3.5 py-3 text-left transition-colors hover:bg-surface-container text-on-surface">
+<div class="flex items-center justify-center w-6 h-6 rounded bg-secondary/15 text-secondary font-label-md text-xs shrink-0 font-bold border border-secondary/30">
+          02
+        </div>
+<div class="w-1.5 h-7 rounded-full bg-secondary shadow-[0_0_8px_#4cd7f6] mx-2.5 shrink-0"></div>
+<div class="relative w-9 h-9 rounded-lg overflow-hidden shrink-0 bg-surface-container-high border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="Futuristic cyber gaming team logo for Phantom Eclipse displaying a glowing purple crescent moon and sleek silver shuriken design on dark backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpwz_qCy5T3_KE05A4XwHCkqTGaaCli6JghU5vi0Wh8nfkUVdOUphkOvoEAfDQQjbcF7ZccH2izuFYFLWWiepWuSQAuV0cKiiGapAx6rhpp60gg3NrRhkjY5YCQo8aNU5WID-o7SdbAYOKiCP5CpcqFcOAbF7MGaqTjMkYscWw3x2AZQ3RO75fzgu61cKOWQLxsuwOWJJgtHrSP9PHGk2GZrltXwwBqaI9tKtGfVhG"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1 ml-3 pr-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="font-headline-sm text-sm uppercase tracking-tight text-white font-bold truncate">Phantom Eclipse</span>
+<span class="material-symbols-outlined text-[16px] text-secondary shrink-0 drop-shadow-[0_0_6px_#4cd7f6]">verified</span>
+</div>
+<span class="font-label-sm text-[10px] text-secondary uppercase font-semibold tracking-wider">Gran Final</span>
+</div>
+<div class="grid grid-cols-4 w-36 text-center shrink-0 font-label-md text-xs font-medium">
+<span class="text-on-surface-variant self-center">5</span>
+<span class="text-secondary self-center font-bold">4</span>
+<span class="text-white self-center">+14</span>
+<span class="text-primary font-bold text-sm self-center drop-shadow-[0_0_8px_rgba(208,188,255,0.4)]">12</span>
+</div>
+</button>
+<!-- Expandable Details -->
+<div class="accordion-panel hidden px-4 pb-4 pt-2 bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Racha de Partidas (Últimas 5)</span>
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-[10px] font-bold">W</span>
+<span class="px-2 py-0.5 rounded bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-[10px] font-bold">W</span>
+<span class="px-2 py-0.5 rounded bg-error-container/40 border border-error/30 text-error font-label-sm text-[10px] font-bold">L</span>
+<span class="px-2 py-0.5 rounded bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-[10px] font-bold">W</span>
+<span class="px-2 py-0.5 rounded bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-[10px] font-bold">W</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-2.5 pt-2 bg-surface-container/60 border border-outline-variant/30 p-2.5 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Rondas Ganadas</span>
+<span class="font-label-md text-xs text-white font-medium">58 / 78 (74%)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">K/D General</span>
+<span class="font-label-md text-xs text-secondary font-bold">1.22 KDR</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Próx. Rival</span>
+<span class="font-label-md text-xs text-primary truncate font-semibold">Nova (S6)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Team Rank #3 (Repechaje) -->
+<div class="team-card overflow-hidden rounded-xl bg-surface-container-low border border-primary/30 transition-all duration-200 shadow-[0_4px_16px_rgba(0,0,0,0.4)]" data-team="vortex legion">
+<button class="accordion-trigger w-full flex items-center px-3.5 py-3 text-left transition-colors hover:bg-surface-container text-on-surface">
+<div class="flex items-center justify-center w-6 h-6 rounded bg-primary-container/20 text-primary font-label-md text-xs shrink-0 font-bold border border-primary/30">
+          03
+        </div>
+<div class="w-1.5 h-7 rounded-full bg-primary shadow-[0_0_8px_#d0bcff] mx-2.5 shrink-0"></div>
+<div class="relative w-9 h-9 rounded-lg overflow-hidden shrink-0 bg-surface-container-high border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="Competitive gaming crest for Vortex Legion featuring stylized geometric vortex hurricane blades in radiant turquoise and obsidian black." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_npvf0soaFwAekZvSjAV1SH5KXYNIgzR8yI2ul2kIxopivOnbZ6yc3o-0a7YkOtoi9tScbuYa-1NmOJTDEV_Ktj1QENVhUY60YL_SlCTH0os4JIw43XIjZDEM4H0Gh9jw1PIxIFN9a9dfROsHkTtXKNe3LYTCH2XpxqcJAIz4azSQPKL_mt_tH-6tKpOmeXtS1iSaZAbh7JHeNBXbsZRrs8fToXqnMv-RDKNJzbE5"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1 ml-3 pr-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="font-headline-sm text-sm uppercase tracking-tight text-white font-bold truncate">Vortex Legion</span>
+</div>
+<span class="font-label-sm text-[10px] text-primary uppercase font-semibold tracking-wider">Repechaje</span>
+</div>
+<div class="grid grid-cols-4 w-36 text-center shrink-0 font-label-md text-xs font-medium">
+<span class="text-on-surface-variant self-center">5</span>
+<span class="text-white self-center font-bold">3</span>
+<span class="text-white self-center">+4</span>
+<span class="text-primary font-bold text-sm self-center drop-shadow-[0_0_8px_rgba(208,188,255,0.4)]">9</span>
+</div>
+</button>
+<!-- Expandable Details -->
+<div class="accordion-panel hidden px-4 pb-4 pt-2 bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Racha de Partidas (Últimas 5)</span>
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-[10px] font-bold">W</span>
+<span class="px-2 py-0.5 rounded bg-error-container/40 border border-error/30 text-error font-label-sm text-[10px] font-bold">L</span>
+<span class="px-2 py-0.5 rounded bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-[10px] font-bold">W</span>
+<span class="px-2 py-0.5 rounded bg-error-container/40 border border-error/30 text-error font-label-sm text-[10px] font-bold">L</span>
+<span class="px-2 py-0.5 rounded bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-[10px] font-bold">W</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-2.5 pt-2 bg-surface-container/60 border border-outline-variant/30 p-2.5 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Rondas Ganadas</span>
+<span class="font-label-md text-xs text-white font-medium">51 / 82 (62%)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">K/D General</span>
+<span class="font-label-md text-xs text-white font-medium">1.05 KDR</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Próx. Rival</span>
+<span class="font-label-md text-xs text-white truncate font-medium">Cyber Hydra</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Team Rank #4 (Repechaje zone) -->
+<div class="team-card overflow-hidden rounded-xl bg-surface-container-low border border-primary/30 transition-all duration-200 shadow-[0_4px_16px_rgba(0,0,0,0.4)]" data-team="cyber hydra">
+<button class="accordion-trigger w-full flex items-center px-3.5 py-3 text-left transition-colors hover:bg-surface-container text-on-surface">
+<div class="flex items-center justify-center w-6 h-6 rounded bg-primary-container/20 text-primary font-label-md text-xs shrink-0 font-bold border border-primary/30">
+          04
+        </div>
+<div class="w-1.5 h-7 rounded-full bg-primary shadow-[0_0_8px_#d0bcff] mx-2.5 shrink-0"></div>
+<div class="relative w-9 h-9 rounded-lg overflow-hidden shrink-0 bg-surface-container-high border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="Fierce esports emblem for Cyber Hydra showing three cybernetic mechanical serpent heads with neon blue illuminated circuits." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChdt2ldz41o7jt5nWa9--ExQyw6oZPTi2GXpuWSEOFDEZ4UCJc2mgxLtV8fDRmj0m4V5uqZ5OfFKVk9fiZ73Kdlvi0d13rRNr3EPihlb0VapKY2I05IgXYeJCiG-yTgKyvXd8Ke47qdtvVFPRtYi6__MOmF43AuSvF4EP40fDaUTgA_RVCb0llCA_14PJYJFGAgutIgamU0N414R1CZyjBSznXtttetiYGIzN1LD-x"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1 ml-3 pr-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="font-headline-sm text-sm uppercase tracking-tight text-white font-bold truncate">Cyber Hydra</span>
+</div>
+<span class="font-label-sm text-[10px] text-primary uppercase font-semibold tracking-wider">Repechaje</span>
+</div>
+<div class="grid grid-cols-4 w-36 text-center shrink-0 font-label-md text-xs font-medium">
+<span class="text-on-surface-variant self-center">5</span>
+<span class="text-white self-center font-bold">2</span>
+<span class="text-outline self-center">-2</span>
+<span class="text-primary font-bold text-sm self-center drop-shadow-[0_0_8px_rgba(208,188,255,0.4)]">6</span>
+</div>
+</button>
+<!-- Expandable Details -->
+<div class="accordion-panel hidden px-4 pb-4 pt-2 bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Racha de Partidas (Últimas 5)</span>
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-error-container/40 border border-error/30 text-error font-label-sm text-[10px] font-bold">L</span>
+<span class="px-2 py-0.5 rounded bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-[10px] font-bold">W</span>
+<span class="px-2 py-0.5 rounded bg-error-container/40 border border-error/30 text-error font-label-sm text-[10px] font-bold">L</span>
+<span class="px-2 py-0.5 rounded bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-[10px] font-bold">W</span>
+<span class="px-2 py-0.5 rounded bg-error-container/40 border border-error/30 text-error font-label-sm text-[10px] font-bold">L</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-2.5 pt-2 bg-surface-container/60 border border-outline-variant/30 p-2.5 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Rondas Ganadas</span>
+<span class="font-label-md text-xs text-white font-medium">44 / 85 (51%)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">K/D General</span>
+<span class="font-label-md text-xs text-outline font-medium">0.94 KDR</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Próx. Rival</span>
+<span class="font-label-md text-xs text-white truncate font-medium">Vortex Legion</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Team Rank #5 (Eliminación) -->
+<div class="team-card overflow-hidden rounded-xl bg-surface-container-low border border-error/25 transition-all duration-200 opacity-85 hover:opacity-100 shadow-[0_4px_16px_rgba(0,0,0,0.4)]" data-team="solaris gaming">
+<button class="accordion-trigger w-full flex items-center px-3.5 py-3 text-left transition-colors hover:bg-surface-container text-on-surface">
+<div class="flex items-center justify-center w-6 h-6 rounded bg-surface-container text-outline font-label-md text-xs shrink-0 font-bold border border-outline-variant/30">
+          05
+        </div>
+<div class="w-1.5 h-7 rounded-full bg-error shadow-[0_0_8px_#ffb4ab] mx-2.5 shrink-0"></div>
+<div class="relative w-9 h-9 rounded-lg overflow-hidden shrink-0 bg-surface-container-high border border-outline-variant/30 opacity-75">
+<img class="w-full h-full object-cover" data-alt="Esports clan insignia for Solaris Gaming depicting a scorched orange solar flare star emblem with geometric sharp angular wings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8PM4cm9XyJ5w4OjS3VJNT8-JOdRuZ_Kx7xIpdC7n438OY-hBjj2SX28kIK-E_wfUpLlNdc3W2dzsQE_YlzDfQ5Qdkas77xxuZbsCTxTeuMbBDOcNrROV-z-OvWKw2LtLAo6vrS3-ZG7MGjKp9VuupQQHO03e2J0F-GFKmDJWIZuh6JxSBBzHjFtaIj1bkHCqHXsiFmfPf1FnWadudWD4Oi3iLxUJT02lrribzjeIr"/>
+</div>
+<div class="flex flex-col min-w-0 flex-1 ml-3 pr-2">
+<div class="flex items-center gap-1.5 min-w-0">
+<span class="font-headline-sm text-sm uppercase tracking-tight text-white/90 font-bold truncate">Solaris Gaming</span>
+</div>
+<span class="font-label-sm text-[10px] text-error uppercase font-semibold tracking-wider">Descenso</span>
+</div>
+<div class="grid grid-cols-4 w-36 text-center shrink-0 font-label-md text-xs font-medium">
+<span class="text-on-surface-variant self-center">5</span>
+<span class="text-outline self-center font-bold">1</span>
+<span class="text-error self-center font-semibold">-16</span>
+<span class="text-on-surface font-bold text-sm self-center">3</span>
+</div>
+</button>
+<!-- Expandable Details -->
+<div class="accordion-panel hidden px-4 pb-4 pt-2 bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Racha de Partidas (Últimas 5)</span>
+<div class="flex items-center gap-1">
+<span class="px-2 py-0.5 rounded bg-error-container/40 border border-error/30 text-error font-label-sm text-[10px] font-bold">L</span>
+<span class="px-2 py-0.5 rounded bg-error-container/40 border border-error/30 text-error font-label-sm text-[10px] font-bold">L</span>
+<span class="px-2 py-0.5 rounded bg-secondary/15 border border-secondary/30 text-secondary font-label-sm text-[10px] font-bold">W</span>
+<span class="px-2 py-0.5 rounded bg-error-container/40 border border-error/30 text-error font-label-sm text-[10px] font-bold">L</span>
+<span class="px-2 py-0.5 rounded bg-error-container/40 border border-error/30 text-error font-label-sm text-[10px] font-bold">L</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-2.5 pt-2 bg-surface-container/60 border border-outline-variant/30 p-2.5 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Rondas Ganadas</span>
+<span class="font-label-md text-xs text-white font-medium">32 / 80 (40%)</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">K/D General</span>
+<span class="font-label-md text-xs text-error font-bold">0.78 KDR</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase">Estado</span>
+<span class="font-label-md text-xs text-error truncate font-semibold">Eliminado</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State Search Result -->
+<div class="hidden flex-col items-center justify-center py-8 px-4 text-center bg-surface-container-low border border-outline-variant/30 rounded-xl" id="noResultsNotice">
+<div class="w-12 h-12 rounded-full bg-surface-container-high border border-outline-variant/40 flex items-center justify-center text-outline mb-3">
+<span class="material-symbols-outlined text-[24px]">troubleshoot</span>
+</div>
+<p class="font-headline-sm text-base uppercase text-white font-bold">Sin Resultados</p>
+<p class="font-body-sm text-xs text-on-surface-variant mt-1 max-w-xs">No se encontró ningún equipo o jugador con ese nombre en este grupo.</p>
+</div>
+<!-- Live Highlight Notification Footer Banner -->
+<div class="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container border border-outline-variant/40 shadow-[0_8px_24px_rgba(0,0,0,0.5)]">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest border border-primary/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[22px] drop-shadow-[0_0_6px_rgba(208,188,255,0.4)]">calendar_clock</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-md text-xs text-white font-bold uppercase truncate">Próxima Jornada: Fecha 6</span>
+<span class="font-body-sm text-xs text-on-surface-variant truncate">Sábado 18:00hs GMT-3 • 3 Partidos en Vivo</span>
+</div>
+<button class="px-3.5 py-1.5 bg-primary text-on-primary font-label-md text-xs font-bold uppercase rounded-lg hover:brightness-110 shadow-[0_0_12px_rgba(208,188,255,0.3)] transition-all shrink-0">
+      Alertar
+    </button>
+</div>
+</div>
+<script>
+  // Accordion Expand/Collapse Behavior
+  document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const panel = trigger.nextElementSibling;
+      const isOpen = !panel.classList.contains('hidden');
+      
+      // Close other accordion panels
+      document.querySelectorAll('.accordion-panel').forEach(p => p.classList.add('hidden'));
+      
+      if (!isOpen) {
+        panel.classList.remove('hidden');
+      }
+    });
+  });
+
+  // Segmented Tab Filter Interaction
+  const tabs = document.querySelectorAll('.group-tab');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.className = 'group-tab flex-1 min-w-[76px] py-2 px-3 rounded-lg text-center transition-all text-on-surface-variant hover:text-white flex items-center justify-center gap-1';
+        const dot = t.querySelector('.rounded-full');
+        if (dot) dot.remove();
+      });
+
+      tab.className = 'group-tab flex-1 min-w-[76px] py-2 px-3 rounded-lg text-center transition-all bg-surface-container border border-primary/40 text-primary shadow-[0_0_12px_rgba(208,188,255,0.15)] flex items-center justify-center gap-1.5 font-bold';
+      const dot = document.createElement('span');
+      dot.className = 'w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_6px_#d0bcff]';
+      tab.appendChild(dot);
+    });
+  });
+
+  // Team Quick Search Filter
+  const searchInput = document.getElementById('standingsSearch');
+  const clearBtn = document.getElementById('clearSearch');
+  const teamCards = document.querySelectorAll('.team-card');
+  const noResults = document.getElementById('noResultsNotice');
+
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.toLowerCase().trim();
+    let matches = 0;
+
+    if (query.length > 0) {
+      clearBtn.classList.remove('hidden');
+    } else {
+      clearBtn.classList.add('hidden');
+    }
+
+    teamCards.forEach(card => {
+      const teamName = card.getAttribute('data-team');
+      if (teamName.includes(query)) {
+        card.style.display = 'block';
+        matches++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (matches === 0) {
+      noResults.classList.remove('hidden');
+      noResults.classList.add('flex');
+    } else {
+      noResults.classList.add('hidden');
+      noResults.classList.remove('flex');
+    }
+  });
+
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    clearBtn.classList.add('hidden');
+    teamCards.forEach(card => card.style.display = 'block');
+    noResults.classList.add('hidden');
+    noResults.classList.remove('flex');
+    searchInput.focus();
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/95 backdrop-blur-2xl border-t border-outline-variant/30 shadow-[0_-4px_24px_rgba(0,0,0,0.7)]" data-active-classes="text-primary drop-shadow-[0_0_10px_rgba(208,188,255,0.5)]"><div class="flex items-center justify-around h-20 px-2"><a class="flex flex-col items-center justify-center w-16 h-14 text-on-surface-variant hover:text-white transition-all" data-path="reportar" href="#"><span class="material-symbols-outlined text-[22px]">upload_file</span><span class="font-label-sm text-[10px] uppercase font-semibold mt-1 tracking-wider">Reportar</span></a><a aria-current="page" class="flex flex-col items-center justify-center w-16 h-14 transition-all text-primary drop-shadow-[0_0_10px_rgba(208,188,255,0.5)]" data-path="posiciones" href="#"><span class="material-symbols-outlined text-[22px]">view_kanban</span><span class="font-label-sm text-[10px] uppercase font-bold mt-1 tracking-wider">Posiciones</span></a><a class="flex flex-col items-center justify-center w-16 h-14 text-on-surface-variant hover:text-white transition-all" data-path="ranking-global" href="#"><span class="material-symbols-outlined text-[22px]">leaderboard</span><span class="font-label-sm text-[10px] uppercase font-semibold mt-1 tracking-wider">Ranking</span></a><a class="flex flex-col items-center justify-center w-16 h-14 text-on-surface-variant hover:text-white transition-all" data-path="mi-equipo" href="#"><span class="material-symbols-outlined text-[22px]">shield_person</span><span class="font-label-sm text-[10px] uppercase font-semibold mt-1 tracking-wider">Mi Equipo</span></a></div></nav></body></html>
