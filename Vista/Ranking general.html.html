@@ -1,13 +1,22 @@
-<!DOCTYPE html><html class="dark" lang="es"><head>
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    name="viewport">
   <meta content="mobile_tab" name="shell-type">
-  <title>RF-M06-01 — Consultar ranking general</title>
-  
+  <title>RF-M06-01 — Consultar ranking general
+  </title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet">
 
   <style data-stitch-css-vh="f80667129d367c57===
     @layer base {
@@ -27,23 +36,36 @@
     ::-webkit-scrollbar { display: none; }
   ">
     @layer base {
-      html, body {
+
+      html,
+      body {
         width: 100vw;
         margin: 0;
         padding: 0;
         background-color: #0f131d;
       }
+
       body {
         overscroll-behavior: none;
         min-height: max(884px, 884px);
       }
-      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
-      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 0px);
+      }
     }
-    ::-webkit-scrollbar { display: none; }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
   </style>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
   <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
@@ -99,24 +121,33 @@
     };
   </script>
 </head>
-<body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-[884px] selection:bg-primary-container selection:text-on-primary" data-stitch-vh="min-h-[884px]===min-h-screen">
+
+<body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-[884px] selection:bg-primary-container selection:text-on-primary"
+  data-stitch-vh="min-h-[884px]===min-h-screen">
 
   <!-- Header Fijo Idéntico a la Referencia -->
   <header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
     <div class="h-16 px-4 flex items-center justify-between gap-2">
       <div class="flex items-center gap-2 min-w-0 flex-1">
-        <img alt="GameTournament Icon" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XpygqtB-bfcnidEPtOs4YaMzI85kEe1cUA4x150FiO5rNTnH0t95EFvVUZG0FrvyCJCdoBOzQ28UK9ZA3gd5kPv7x1o2oDo_JjYQM1LvPQBkGRu9JxRKvtps0qXNVC80BaY6keTa_H89h3ZBIvV1MW5FgOEqeliqUKrLVhjl0EBdzGv7cyBNCGR194M50_oendvMN_6J693_cD5iSNWZr9nQkJetnxjdtl-w0j4ch2">
+        <img alt="GameTournament Icon" class="h-8 w-auto object-contain shrink-0"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1XpygqtB-bfcnidEPtOs4YaMzI85kEe1cUA4x150FiO5rNTnH0t95EFvVUZG0FrvyCJCdoBOzQ28UK9ZA3gd5kPv7x1o2oDo_JjYQM1LvPQBkGRu9JxRKvtps0qXNVC80BaY6keTa_H89h3ZBIvV1MW5FgOEqeliqUKrLVhjl0EBdzGv7cyBNCGR194M50_oendvMN_6J693_cD5iSNWZr9nQkJetnxjdtl-w0j4ch2">
         <div class="flex flex-col min-w-0">
-          <span class="font-headline-sm text-[15px] font-bold uppercase text-primary tracking-tight truncate">GAMETOUNAMENT</span>
-          <span class="font-label-sm text-[10px] text-on-surface-variant truncate uppercase tracking-widest">Hall of Fame Elo</span>
+          <span class="font-headline-sm text-[15px] font-bold uppercase text-primary tracking-tight truncate">GAMETOUNAMENT
+          </span>
+          <span class="font-label-sm text-[10px] text-on-surface-variant truncate uppercase tracking-widest">Hall of
+            Fame Elo
+          </span>
         </div>
       </div>
       <div class="flex items-center gap-1 shrink-0">
-        <button aria-label="Notificaciones" class="relative w-10 h-10 rounded-lg flex items-center justify-center text-on-surface hover:text-primary-container">
-          <span class="material-symbols-outlined text-[20px]">notifications</span>
+        <button aria-label="Notificaciones"
+          class="relative w-10 h-10 rounded-lg flex items-center justify-center text-on-surface hover:text-primary-container">
+          <span class="material-symbols-outlined text-[20px]">notifications
+          </span>
         </button>
         <div class="w-8 h-8 rounded-full overflow-hidden border border-surface-bright">
-          <img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8kvt0Um8iaKY84SQHDpijWEKzT1Bv6rqwc1VxkR6Pu41M-6sJubqg7IJ9PNmJ8ZYwNXzeKXcXq3R0rG0lGhtK4U4DSq0dWpJ2AVI0hEujW-dNHIx5bL41vq0XDyRZTck4vV5lUbzdsYu1MBJ3hX2Tkvu9q_pOyLEtpQsFTfxgi9sj0ntJcQWBWIgIrGS1pAf34xeHnkntnm_-4gJEQ2pfCSipE0HJoLQCcdgrhfw">
+          <img alt="Profile" class="w-full h-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8kvt0Um8iaKY84SQHDpijWEKzT1Bv6rqwc1VxkR6Pu41M-6sJubqg7IJ9PNmJ8ZYwNXzeKXcXq3R0rG0lGhtK4U4DSq0dWpJ2AVI0hEujW-dNHIx5bL41vq0XDyRZTck4vV5lUbzdsYu1MBJ3hX2Tkvu9q_pOyLEtpQsFTfxgi9sj0ntJcQWBWIgIrGS1pAf34xeHnkntnm_-4gJEQ2pfCSipE0HJoLQCcdgrhfw">
         </div>
       </div>
     </div>
@@ -130,12 +161,15 @@
       <div class="bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low p-3.5 rounded-xl border-l-2 border-tertiary flex items-center justify-between shadow-sm">
         <div class="flex items-center gap-2.5">
           <div class="w-9 h-9 rounded-lg bg-tertiary-container/20 flex items-center justify-center text-tertiary">
-            <span class="material-symbols-outlined text-[20px]">military_tech</span>
+            <span class="material-symbols-outlined text-[20px]">military_tech
+            </span>
           </div>
           <div>
             <div class="flex items-center gap-1.5">
-              <span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-[9px] font-label-sm font-bold text-tertiary tracking-wider uppercase">RF-M06-01</span>
-              <span class="font-headline-sm text-sm text-primary uppercase font-bold">Ranking general</span>
+              <span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-[9px] font-label-sm font-bold text-tertiary tracking-wider uppercase">RF-M06-01
+              </span>
+              <span class="font-headline-sm text-sm text-primary uppercase font-bold">Ranking general
+              </span>
             </div>
             <p class="font-body-sm text-[11px] text-on-surface-variant leading-tight mt-0.5">
               Lista ordenada de mejores jugadores según puntos acumulados en partidas finalizadas.
@@ -148,24 +182,35 @@
     <!-- Paso 2: Selección de Juego o Categoría (Chips Horizontales idénticos a la referencia) -->
     <section class="space-y-2">
       <div class="flex items-center justify-between">
-        <span class="font-label-sm text-[11px] uppercase tracking-wider text-outline font-bold">2. Seleccionar Juego / Categoría:</span>
-        <span class="font-label-sm text-[10px] text-tertiary font-bold">Temporada 2026</span>
+        <span class="font-label-sm text-[11px] uppercase tracking-wider text-outline font-bold">2. Seleccionar Juego /
+          Categoría:
+        </span>
+        <span class="font-label-sm text-[10px] text-tertiary font-bold">Temporada 2026
+        </span>
       </div>
 
       <!-- Sports Horizontal Chips con selección dinámica -->
       <div id="game-chips-list" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1 -mx-4 px-4">
-        <button onclick="selectGame(this, &#39;valorant&#39;)" class="game-chip shrink-0 px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-xs font-bold shadow-sm flex items-center gap-1.5">
+        <button onclick="selectGame(this, &#39;valorant&#39;)"
+          class="game-chip shrink-0 px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-xs font-bold shadow-sm flex items-center gap-1.5">
           <span>🎯 VALORANT</span>
-          <span class="bg-on-primary/20 px-1.5 py-0.2 rounded-full text-[9px]">480 pts</span>
+          <span class="bg-on-primary/20 px-1.5 py-0.2 rounded-full text-[9px]">480 pts
+          </span>
         </button>
-        <button onclick="selectGame(this, &#39;lol&#39;)" class="game-chip shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-xs flex items-center gap-1.5">
-          <span>⚔️ LoL Clash</span>
+        <button onclick="selectGame(this, &#39;lol&#39;)"
+          class="game-chip shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-xs flex items-center gap-1.5">
+          <span>⚔️ LoL Clash
+          </span>
         </button>
-        <button onclick="selectGame(this, &#39;rocket&#39;)" class="game-chip shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-xs flex items-center gap-1.5">
-          <span>🚀 Rocket League</span>
+        <button onclick="selectGame(this, &#39;rocket&#39;)"
+          class="game-chip shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-xs flex items-center gap-1.5">
+          <span>🚀 Rocket League
+          </span>
         </button>
-        <button onclick="selectGame(this, &#39;fighting&#39;)" class="game-chip shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-xs flex items-center gap-1.5">
-          <span>🥊 Fighting Masters (Sin datos)</span>
+        <button onclick="selectGame(this, &#39;fighting&#39;)"
+          class="game-chip shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-xs flex items-center gap-1.5">
+          <span>🥊 Fighting Masters (Sin datos)
+          </span>
         </button>
       </div>
 
@@ -173,15 +218,21 @@
       <div class="flex items-center gap-2 pt-1">
         <div class="relative flex-1">
           <select class="w-full bg-surface-container-low border border-surface-bright text-on-surface font-label-sm text-[11px] rounded-lg py-1.5 px-3 pr-7 appearance-none focus:outline-none">
-            <option>Categoría Profesional (Tier 1)</option>
-            <option>Comunidad Abierta</option>
-            <option>Solo / Dúo</option>
+            <option>Categoría Profesional (Tier 1)
+            </option>
+            <option>Comunidad Abierta
+            </option>
+            <option>Solo / Dúo
+            </option>
           </select>
-          <span class="material-symbols-outlined text-outline pointer-events-none absolute right-2.5 top-1.5 text-base">expand_more</span>
+          <span class="material-symbols-outlined text-outline pointer-events-none absolute right-2.5 top-1.5 text-base">expand_more
+          </span>
         </div>
         <div class="relative w-36">
-          <input type="text" placeholder="Buscar clan..." class="w-full bg-surface-container-low border border-surface-bright text-on-surface font-body-sm text-[11px] rounded-lg py-1.5 pl-7 pr-2 placeholder:text-outline focus:outline-none">
-          <span class="material-symbols-outlined text-outline pointer-events-none absolute left-2 top-1.5 text-sm">search</span>
+          <input type="text" placeholder="Buscar clan..."
+            class="w-full bg-surface-container-low border border-surface-bright text-on-surface font-body-sm text-[11px] rounded-lg py-1.5 pl-7 pr-2 placeholder:text-outline focus:outline-none">
+          <span class="material-symbols-outlined text-outline pointer-events-none absolute left-2 top-1.5 text-sm">search
+          </span>
         </div>
       </div>
     </section>
@@ -189,18 +240,21 @@
     <!-- PODIO TOP 3 DESTACADO MOBILE -->
     <section id="podium-container" class="space-y-2">
       <div class="grid grid-cols-3 gap-2 items-end pt-2 pb-1">
-        
+
         <!-- #2 Plata -->
         <div class="bg-surface-container-low rounded-xl p-2.5 flex flex-col items-center text-center border border-surface-bright/40 relative">
-          <span class="w-5 h-5 rounded-full bg-surface-bright text-secondary font-headline-sm text-[10px] font-bold flex items-center justify-center -mt-4 shadow">
+          <spanclass="w-5 h-5 rounded-full bg-surface-bright text-secondary font-headline-sm text-[10px] font-bold flex items-center justify-center -mt-4 shadow">
             2
           </span>
           <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-headline-md text-xs text-secondary font-bold border border-secondary/30 my-1">
             NS
           </div>
-          <span class="font-headline-sm text-xs text-white font-bold truncate max-w-full">Nexus Storm</span>
-          <span class="font-score-display text-xs text-secondary font-bold mt-1">480 pts</span>
-          <span class="font-label-sm text-[8px] text-outline uppercase">27 PJ · 74% WR</span>
+          <span class="font-headline-sm text-xs text-white font-bold truncate max-w-full">Nexus Storm
+          </span>
+          <span class="font-score-display text-xs text-secondary font-bold mt-1">480 pts
+          </span>
+          <span class="font-label-sm text-[8px] text-outline uppercase">27 PJ · 74% WR
+          </span>
         </div>
 
         <!-- #1 Oro (Centro más alto) -->
@@ -211,9 +265,12 @@
           <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center font-headline-md text-sm text-primary-container font-bold border-2 border-primary-container my-1 shadow">
             VP
           </div>
-          <span class="font-headline-sm text-xs text-white font-bold truncate max-w-full">Valkyrie Prime</span>
-          <span class="font-score-display text-sm text-primary-container font-bold mt-1">640 pts</span>
-          <span class="font-label-sm text-[8px] text-primary-container uppercase font-bold">Líder · 84% WR</span>
+          <span class="font-headline-sm text-xs text-white font-bold truncate max-w-full">Valkyrie Prime
+          </span>
+          <span class="font-score-display text-sm text-primary-container font-bold mt-1">640 pts
+          </span>
+          <span class="font-label-sm text-[8px] text-primary-container uppercase font-bold">Líder · 84% WR
+          </span>
         </div>
 
         <!-- #3 Bronce -->
@@ -224,9 +281,12 @@
           <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-headline-md text-xs text-tertiary font-bold border border-tertiary/30 my-1">
             CT
           </div>
-          <span class="font-headline-sm text-xs text-white font-bold truncate max-w-full">Cyber Titans</span>
-          <span class="font-score-display text-xs text-tertiary font-bold mt-1">395 pts</span>
-          <span class="font-label-sm text-[8px] text-outline uppercase">25 PJ · 68% WR</span>
+          <span class="font-headline-sm text-xs text-white font-bold truncate max-w-full">Cyber Titans
+          </span>
+          <span class="font-score-display text-xs text-tertiary font-bold mt-1">395 pts
+          </span>
+          <span class="font-label-sm text-[8px] text-outline uppercase">25 PJ · 68% WR
+          </span>
         </div>
 
       </div>
@@ -238,11 +298,12 @@
         <h3 class="font-headline-sm text-sm text-on-surface font-semibold">
           3. Clasificación General Ordenada
         </h3>
-        <span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Mayor a Menor</span>
+        <span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Mayor a Menor
+        </span>
       </div>
 
       <div class="bg-surface-container-low rounded-xl border border-surface-bright/40 overflow-hidden divide-y divide-surface-bright/20 shadow-md">
-        
+
         <!-- Row 1 -->
         <div class="p-3 flex items-center justify-between gap-2 bg-surface-container-lowest/70">
           <div class="flex items-center gap-2.5 min-w-0">
@@ -253,13 +314,17 @@
               VP
             </div>
             <div class="min-w-0">
-              <span class="font-headline-sm text-xs text-white font-bold truncate block">Valkyrie Prime</span>
-              <span class="font-body-sm text-[10px] text-on-surface-variant">5 Torneos · 32 Partidas · 84.3% WR</span>
+              <span class="font-headline-sm text-xs text-white font-bold truncate block">Valkyrie Prime
+              </span>
+              <span class="font-body-sm text-[10px] text-on-surface-variant">5 Torneos · 32 Partidas · 84.3% WR
+              </span>
             </div>
           </div>
           <div class="text-right shrink-0">
-            <span class="font-score-display text-base text-primary-container font-bold tabular-nums">640</span>
-            <span class="font-label-sm text-[8px] text-outline block uppercase">PTS</span>
+            <span class="font-score-display text-base text-primary-container font-bold tabular-nums">640
+            </span>
+            <span class="font-label-sm text-[8px] text-outline block uppercase">PTS
+            </span>
           </div>
         </div>
 
@@ -273,33 +338,41 @@
               NS
             </div>
             <div class="min-w-0">
-              <span class="font-headline-sm text-xs text-white font-bold truncate block">Nexus Storm</span>
-              <span class="font-body-sm text-[10px] text-on-surface-variant">4 Torneos · 27 Partidas · 74.0% WR</span>
+              <span class="font-headline-sm text-xs text-white font-bold truncate block">Nexus Storm
+              </span>
+              <span class="font-body-sm text-[10px] text-on-surface-variant">4 Torneos · 27 Partidas · 74.0% WR
+              </span>
             </div>
           </div>
           <div class="text-right shrink-0">
-            <span class="font-score-display text-base text-secondary font-bold tabular-nums">480</span>
-            <span class="font-label-sm text-[8px] text-outline block uppercase">PTS</span>
+            <span class="font-score-display text-base text-secondary font-bold tabular-nums">480
+            </span>
+            <span class="font-label-sm text-[8px] text-outline block uppercase">PTS
+            </span>
           </div>
         </div>
 
         <!-- Row 3 -->
         <div class="p-3 flex items-center justify-between gap-2">
           <div class="flex items-center gap-2.5 min-w-0">
-            <span class="w-5 h-5 rounded-full bg-surface-bright text-tertiary font-headline-sm text-[11px] font-bold flex items-center justify-center shrink-0">
+            <spanclass="w-5 h-5 rounded-full bg-surface-bright text-tertiary font-headline-sm text-[11px] font-bold flex items-center justify-center shrink-0">
               3
             </span>
             <div class="w-7 h-7 rounded bg-surface-container flex items-center justify-center font-headline-md text-xs text-tertiary font-bold border border-tertiary/30 shrink-0">
               CT
             </div>
             <div class="min-w-0">
-              <span class="font-headline-sm text-xs text-white font-bold truncate block">Cyber Titans</span>
-              <span class="font-body-sm text-[10px] text-on-surface-variant">4 Torneos · 25 Partidas · 68.0% WR</span>
+              <span class="font-headline-sm text-xs text-white font-bold truncate block">Cyber Titans
+              </span>
+              <span class="font-body-sm text-[10px] text-on-surface-variant">4 Torneos · 25 Partidas · 68.0% WR
+              </span>
             </div>
           </div>
           <div class="text-right shrink-0">
-            <span class="font-score-display text-base text-tertiary font-bold tabular-nums">395</span>
-            <span class="font-label-sm text-[8px] text-outline block uppercase">PTS</span>
+            <span class="font-score-display text-base text-tertiary font-bold tabular-nums">395
+            </span>
+            <span class="font-label-sm text-[8px] text-outline block uppercase">PTS
+            </span>
           </div>
         </div>
 
@@ -313,13 +386,17 @@
               IE
             </div>
             <div class="min-w-0">
-              <span class="font-headline-sm text-xs text-on-surface font-bold truncate block">Ironclad Elite</span>
-              <span class="font-body-sm text-[10px] text-on-surface-variant">3 Torneos · 19 Partidas · 63.1% WR</span>
+              <span class="font-headline-sm text-xs text-on-surface font-bold truncate block">Ironclad Elite
+              </span>
+              <span class="font-body-sm text-[10px] text-on-surface-variant">3 Torneos · 19 Partidas · 63.1% WR
+              </span>
             </div>
           </div>
           <div class="text-right shrink-0">
-            <span class="font-score-display text-base text-on-surface font-bold tabular-nums">310</span>
-            <span class="font-label-sm text-[8px] text-outline block uppercase">PTS</span>
+            <span class="font-score-display text-base text-on-surface font-bold tabular-nums">310
+            </span>
+            <span class="font-label-sm text-[8px] text-outline block uppercase">PTS
+            </span>
           </div>
         </div>
 
@@ -333,13 +410,17 @@
               SW
             </div>
             <div class="min-w-0">
-              <span class="font-headline-sm text-xs text-on-surface font-bold truncate block">Shadow Wolves</span>
-              <span class="font-body-sm text-[10px] text-on-surface-variant">3 Torneos · 18 Partidas · 44.4% WR</span>
+              <span class="font-headline-sm text-xs text-on-surface font-bold truncate block">Shadow Wolves
+              </span>
+              <span class="font-body-sm text-[10px] text-on-surface-variant">3 Torneos · 18 Partidas · 44.4% WR
+              </span>
             </div>
           </div>
           <div class="text-right shrink-0">
-            <span class="font-score-display text-base text-on-surface font-bold tabular-nums">185</span>
-            <span class="font-label-sm text-[8px] text-outline block uppercase">PTS</span>
+            <span class="font-score-display text-base text-on-surface font-bold tabular-nums">185
+            </span>
+            <span class="font-label-sm text-[8px] text-outline block uppercase">PTS
+            </span>
           </div>
         </div>
 
@@ -350,9 +431,10 @@
     <section id="empty-ranking-section" class="hidden">
       <div class="bg-surface-container-low rounded-xl border border-surface-bright/40 p-8 text-center space-y-3 shadow-md">
         <div class="w-14 h-14 rounded-full bg-surface-container-lowest flex items-center justify-center text-outline mx-auto">
-          <span class="material-symbols-outlined text-[28px]">military_tech</span>
+          <span class="material-symbols-outlined text-[28px]">military_tech
+          </span>
         </div>
-        
+
         <!-- Mensaje exacto exigido en el flujo alternativo -->
         <div class="space-y-1">
           <h3 class="font-headline-md text-base text-primary font-bold">
@@ -364,7 +446,8 @@
         </div>
 
         <div class="pt-2">
-          <button onclick="selectGame(document.querySelector(&#39;.game-chip&#39;), &#39;valorant&#39;)" class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary-container font-label-md text-xs font-bold uppercase tracking-wider transition-all">
+          <button onclick="selectGame(document.querySelector(&#39;.game-chip&#39;), &#39;valorant&#39;)"
+            class="px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary-container font-label-md text-xs font-bold uppercase tracking-wider transition-all">
             Ver juego con partidas activas
           </button>
         </div>
@@ -376,23 +459,34 @@
   <!-- Bottom Navigation Bar Idéntica a la Referencia -->
   <nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.6)]">
     <div class="flex items-center justify-around h-16 px-3">
-      <a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-primary-container transition-colors group" href="../rf-m05-01-registrar-resultado/RegistrarResultado.html">
-        <span class="material-symbols-outlined text-[22px] group-hover:scale-105 transition-transform">edit_note</span>
-        <span class="font-label-sm text-[10px] uppercase tracking-wide">MARCADOR</span>
+      <a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-primary-container transition-colors group"
+        href="../rf-m05-01-registrar-resultado/RegistrarResultado.html">
+        <span class="material-symbols-outlined text-[22px] group-hover:scale-105 transition-transform">edit_note
+        </span>
+        <span class="font-label-sm text-[10px] uppercase tracking-wide">MARCADOR
+        </span>
       </a>
-      <a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-primary-container transition-colors group" href="../rf-m05-02-tabla-posiciones/TablaPosiciones.html">
-        <span class="material-symbols-outlined text-[22px] group-hover:scale-105 transition-transform">leaderboard</span>
-        <span class="font-label-sm text-[10px] uppercase tracking-wide">POSICIONES</span>
+      <a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-primary-container transition-colors group"
+        href="../rf-m05-02-tabla-posiciones/TablaPosiciones.html">
+        <span class="material-symbols-outlined text-[22px] group-hover:scale-105 transition-transform">leaderboard
+        </span>
+        <span class="font-label-sm text-[10px] uppercase tracking-wide">POSICIONES
+        </span>
       </a>
       <a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 -mt-3 group" href="#">
         <div class="w-11 h-11 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-[0_0_16px_rgba(255,94,0,0.35)] group-active:scale-95 transition-all">
-          <span class="material-symbols-outlined text-[26px] font-bold">sports_esports</span>
+          <span class="material-symbols-outlined text-[26px] font-bold">sports_esports
+          </span>
         </div>
-        <span class="font-label-sm text-[9px] uppercase tracking-wide text-primary-container mt-0.5 font-bold">EN VIVO</span>
+        <span class="font-label-sm text-[9px] uppercase tracking-wide text-primary-container mt-0.5 font-bold">EN
+          VIVO
+        </span>
       </a>
       <a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 transition-colors group text-primary-container font-label-md" href="../rf-m06-01-ranking-general/RankingGeneral.html">
-        <span class="material-symbols-outlined text-[22px] group-hover:scale-105 transition-transform">military_tech</span>
-        <span class="font-label-sm text-[10px] uppercase tracking-wide">RANKING</span>
+        <span class="material-symbols-outlined text-[22px] group-hover:scale-105 transition-transform">military_tech
+        </span>
+        <span class="font-label-sm text-[10px] uppercase tracking-wide">RANKING
+        </span>
       </a>
     </div>
   </nav>
@@ -422,4 +516,6 @@
 
 
 
-</body></html>
+</body>
+
+</html>
