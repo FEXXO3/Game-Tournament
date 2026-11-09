@@ -1,0 +1,375 @@
+<!DOCTYPE html><html class="dark" lang="es"><head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport">
+  <meta content="mobile_tab" name="shell-type">
+  <title>RF-M05-01 — Registrar resultado</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <style data-stitch-css-vh="f80667129d367c57===
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        background-color: #0f131d;
+      }
+      body {
+        overscroll-behavior: none;
+        min-height: max(884px, 100dvh);
+      }
+      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+    }
+    ::-webkit-scrollbar { display: none; }
+  ">
+    @layer base {
+      html, body {
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        background-color: #0f131d;
+      }
+      body {
+        overscroll-behavior: none;
+        min-height: max(884px, 884px);
+      }
+      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-lowest": "#0a0e18",
+            "on-secondary": "#00363a",
+            "primary-fixed": "#ffdbce",
+            "error-container": "#93000a",
+            "secondary-container": "#00eefc",
+            "on-tertiary-container": "#3c2900",
+            "secondary-fixed": "#7df4ff",
+            tertiary: "#ffba20",
+            "on-primary-fixed-variant": "#7f2b00",
+            error: "#ffb4ab",
+            "on-background": "#dfe2f1",
+            "on-primary": "#5a1c00",
+            surface: "#0f131d",
+            "inverse-primary": "#a63b00",
+            "surface-container-low": "#171b26",
+            outline: "#ab897d",
+            "surface-container": "#1c1f2a",
+            "on-secondary-container": "#00686f",
+            "surface-bright": "#353944",
+            "surface-dim": "#0f131d",
+            primary: "#ffb599",
+            "on-error": "#690005",
+            background: "#0f131d",
+            secondary: "#d3fbff",
+            "surface-tint": "#ffb599",
+            "primary-container": "#ff5e00",
+            "surface-container-highest": "#313540",
+            "on-surface-variant": "#e4bfb1",
+            "on-surface": "#dfe2f1",
+            "surface-container-high": "#262a35"
+          },
+          fontFamily: {
+            "headline-xl": ["Space Grotesk"],
+            "headline-lg": ["Space Grotesk"],
+            "headline-md": ["Space Grotesk"],
+            "headline-sm": ["Space Grotesk"],
+            "label-lg": ["Space Grotesk"],
+            "label-md": ["Space Grotesk"],
+            "label-sm": ["Space Grotesk"],
+            "body-lg": ["Hanken Grotesk"],
+            "body-md": ["Hanken Grotesk"],
+            "body-sm": ["Hanken Grotesk"],
+            "score-display": ["Space Grotesk"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased flex flex-col min-h-[884px] selection:bg-primary-container selection:text-on-primary" data-stitch-vh="min-h-[884px]===min-h-screen">
+
+  <!-- Header Fijo Idéntico a la Referencia -->
+  <header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+    <div class="h-16 px-4 flex items-center justify-between gap-2">
+      <div class="flex items-center gap-2 min-w-0 flex-1">
+        <img alt="GameTournament Icon" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XpygqtB-bfcnidEPtOs4YaMzI85kEe1cUA4x150FiO5rNTnH0t95EFvVUZG0FrvyCJCdoBOzQ28UK9ZA3gd5kPv7x1o2oDo_JjYQM1LvPQBkGRu9JxRKvtps0qXNVC80BaY6keTa_H89h3ZBIvV1MW5FgOEqeliqUKrLVhjl0EBdzGv7cyBNCGR194M50_oendvMN_6J693_cD5iSNWZr9nQkJetnxjdtl-w0j4ch2">
+        <div class="flex flex-col min-w-0">
+          <span class="font-headline-sm text-[15px] font-bold uppercase text-primary tracking-tight truncate">GAMETOUNAMENT</span>
+          <span class="font-label-sm text-[10px] text-on-surface-variant truncate uppercase tracking-widest">Panel de Arbitraje</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-1 shrink-0">
+        <span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary-container font-label-sm text-[10px] font-bold uppercase flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span> ADMIN
+        </span>
+        <button aria-label="Notificaciones" class="relative w-10 h-10 rounded-lg flex items-center justify-center text-on-surface hover:text-primary-container">
+          <span class="material-symbols-outlined text-[20px]">notifications</span>
+        </button>
+        <div class="w-8 h-8 rounded-full overflow-hidden border border-surface-bright">
+          <img alt="Admin Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8kvt0Um8iaKY84SQHDpijWEKzT1Bv6rqwc1VxkR6Pu41M-6sJubqg7IJ9PNmJ8ZYwNXzeKXcXq3R0rG0lGhtK4U4DSq0dWpJ2AVI0hEujW-dNHIx5bL41vq0XDyRZTck4vV5lUbzdsYu1MBJ3hX2Tkvu9q_pOyLEtpQsFTfxgi9sj0ntJcQWBWIgIrGS1pAf34xeHnkntnm_-4gJEQ2pfCSipE0HJoLQCcdgrhfw">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido Principal Mobile -->
+  <main class="flex-1 flex flex-col relative w-full pt-16 pb-24 px-4 bg-surface space-y-4">
+    
+    <!-- Hero Banner Contextual Requerimiento -->
+    <section class="pt-3">
+      <div class="bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low p-3.5 rounded-xl border-l-2 border-primary-container flex items-center justify-between shadow-sm">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container">
+            <span class="material-symbols-outlined text-[20px]">edit_note</span>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-[9px] font-label-sm font-bold text-primary tracking-wider uppercase">RF-M05-01</span>
+              <span class="font-headline-sm text-sm text-primary uppercase font-bold">Registrar resultado</span>
+            </div>
+            <p class="font-body-sm text-[11px] text-on-surface-variant leading-tight mt-0.5">
+              Anota el marcador final para validar y marcar la partida finalizada.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selector de Torneo Horizontal Chips -->
+    <section class="space-y-2">
+      <div class="flex items-center justify-between">
+        <span class="font-label-sm text-[11px] uppercase tracking-wider text-outline font-bold">Torneo activo:</span>
+        <span class="font-label-sm text-[10px] text-secondary flex items-center gap-1">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> 3 partidas pendientes
+        </span>
+      </div>
+      <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1 -mx-4 px-4">
+        <button class="shrink-0 px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-md text-xs font-bold shadow-sm flex items-center gap-1.5">
+          <span>🎯 VALORANT Champions</span>
+          <span class="bg-on-primary/20 px-1.5 py-0.2 rounded-full text-[9px]">M-104</span>
+        </button>
+        <button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-xs">
+          <span>⚔️ LoL Clash Cup</span>
+        </button>
+        <button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-md text-xs">
+          <span>🚀 Rocket Masters</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Paso 1: Selección de Enfrentamiento -->
+    <section class="space-y-2">
+      <h3 class="font-headline-sm text-sm text-on-surface font-semibold flex items-center justify-between">
+        <span>1. Seleccionar enfrentamiento:</span>
+        <span class="text-xs text-primary font-label-sm">Fase Grupos · R2</span>
+      </h3>
+
+      <!-- Tarjeta Enfrentamiento Seleccionado (M-104) -->
+      <div class="bg-surface-container-low border-2 border-primary-container rounded-xl p-3.5 shadow-md space-y-3 relative overflow-hidden">
+        <div class="absolute top-0 right-0 bg-primary-container text-on-primary font-label-sm text-[9px] font-bold px-2 py-0.5 rounded-bl uppercase">
+          Enfrentamiento seleccionado
+        </div>
+
+        <div class="flex items-center justify-between pt-1">
+          <span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Partida #M-104 · Servidor LATAM</span>
+          <span class="font-label-sm text-[10px] text-secondary font-bold flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span> Por Definir
+          </span>
+        </div>
+
+        <!-- VS Banner de Equipos -->
+        <div class="grid grid-cols-5 items-center gap-2 bg-surface-container-lowest/60 p-3 rounded-lg border border-surface-bright/20">
+          <div class="col-span-2 flex flex-col items-center text-center">
+            <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center font-headline-md text-sm text-primary-container font-bold border border-primary-container/30 mb-1">
+              VP
+            </div>
+            <span class="font-headline-sm text-xs text-on-surface font-bold truncate max-w-full">Valkyrie Prime</span>
+            <span class="font-label-sm text-[9px] text-outline uppercase">Equipo A</span>
+          </div>
+
+          <div class="col-span-1 flex flex-col items-center justify-center">
+            <span class="font-headline-md text-sm text-outline font-bold">VS</span>
+            <span class="font-label-sm text-[9px] text-primary-container font-semibold">BO3</span>
+          </div>
+
+          <div class="col-span-2 flex flex-col items-center text-center">
+            <div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center font-headline-md text-sm text-secondary font-bold border border-secondary/30 mb-1">
+              NS
+            </div>
+            <span class="font-headline-sm text-xs text-on-surface font-bold truncate max-w-full">Nexus Storm</span>
+            <span class="font-label-sm text-[9px] text-outline uppercase">Equipo B</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paso 2: Escribir Marcador y Validar (Flujo Normal y Alternativo) -->
+    <section class="space-y-3">
+      <h3 class="font-headline-sm text-sm text-on-surface font-semibold">
+        2. Escribir marcador final de cada participante:
+      </h3>
+
+      <form id="mobile-score-form" onsubmit="event.preventDefault(); validateAndSubmit();" class="space-y-3">
+        <div class="grid grid-cols-2 gap-3">
+          
+          <!-- Input Marcador Equipo A -->
+          <div class="bg-surface-container-low rounded-xl p-3 border border-surface-bright/30 flex flex-col items-center text-center">
+            <span class="font-label-sm text-[10px] text-primary-container uppercase font-bold mb-1">Valkyrie Prime</span>
+            <span class="font-body-sm text-[11px] text-outline mb-2">Marcador obtenido</span>
+            <div class="relative w-full flex justify-center">
+              <input type="number" id="score-input-a" value="2" class="w-20 h-14 text-center font-score-display text-2xl font-bold bg-surface-container-lowest border-2 border-primary-container/60 rounded-xl text-primary focus:border-primary-container focus:outline-none tabular-nums" required>
+            </div>
+            <span class="font-body-sm text-[10px] text-outline mt-2">Puntos / Rondas</span>
+          </div>
+
+          <!-- Input Marcador Equipo B -->
+          <div class="bg-surface-container-low rounded-xl p-3 border border-surface-bright/30 flex flex-col items-center text-center">
+            <span class="font-label-sm text-[10px] text-secondary uppercase font-bold mb-1">Nexus Storm</span>
+            <span class="font-body-sm text-[11px] text-outline mb-2">Marcador obtenido</span>
+            <div class="relative w-full flex justify-center">
+              <input type="number" id="score-input-b" value="1" class="w-20 h-14 text-center font-score-display text-2xl font-bold bg-surface-container-lowest border-2 border-secondary/60 rounded-xl text-secondary focus:border-secondary focus:outline-none tabular-nums" required>
+            </div>
+            <span class="font-body-sm text-[10px] text-outline mt-2">Puntos / Rondas</span>
+          </div>
+
+        </div>
+
+        <!-- Banner de Error Dinámico (Flujo Alternativo del requerimiento) -->
+        <div id="error-message-box" class="hidden bg-error-container/40 border border-error text-error p-3 rounded-xl flex items-start gap-2 text-xs">
+          <span class="material-symbols-outlined text-lg shrink-0 mt-0.5">error</span>
+          <div>
+            <span class="font-headline-sm text-xs font-bold block text-white">Error de validación</span>
+            <span id="error-message-text" class="font-body-sm text-[11px] text-error">
+              No se permiten números negativos ni campos vacíos. Por favor rectifica los datos.
+            </span>
+          </div>
+        </div>
+
+        <!-- Banner de Éxito Dinámico (Postcondición del requerimiento) -->
+        <div id="success-message-box" class="bg-surface-container-lowest border border-secondary p-3 rounded-xl flex items-start gap-2.5 text-xs shadow-md">
+          <span class="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5">check_circle</span>
+          <div class="space-y-0.5">
+            <span class="font-headline-sm text-xs font-bold text-secondary uppercase tracking-wider block">¡Resultado Guardado con Éxito!</span>
+            <p class="font-body-sm text-[11px] text-on-surface leading-tight">
+              Postcondición: La partida <strong class="text-primary-container">#M-104</strong> queda marcada como <span class="text-secondary font-bold">Finalizada</span>. Ganador definido: <strong class="text-white">Valkyrie Prime (2 - 1)</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Simulador Rápido de Casos -->
+        <div class="bg-surface-container-lowest/80 p-2.5 rounded-lg border border-surface-bright/20 flex items-center justify-between text-[11px]">
+          <span class="font-label-sm text-outline">Simular validación:</span>
+          <div class="flex items-center gap-1.5">
+            <button type="button" onclick="setScores(2, 1)" class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface hover:text-primary-container font-label-sm text-[10px]">
+              Válido (2 - 1)
+            </button>
+            <button type="button" onclick="setScores(-1, 2)" class="px-2 py-0.5 rounded bg-surface-container-high text-error hover:bg-error-container font-label-sm text-[10px]">
+              Negativo (-1)
+            </button>
+            <button type="button" onclick="setScores(&#39;&#39;, 2)" class="px-2 py-0.5 rounded bg-surface-container-high text-tertiary font-label-sm text-[10px]">
+              Vacío
+            </button>
+          </div>
+        </div>
+
+        <!-- Botón Guardar Resultado (Paso 3 del requerimiento) -->
+        <button type="submit" id="btn-guardar-resultado" class="w-full mt-2 bg-primary-container hover:brightness-110 active:scale-[0.98] text-on-primary font-label-md text-sm uppercase tracking-wider py-3 px-4 rounded-lg flex items-center justify-center gap-2 shadow-[0_0_16px_rgba(255,94,0,0.3)] transition-all font-bold">
+          <span class="material-symbols-outlined text-[20px]">save</span>
+          <span>Guardar resultado</span>
+        </button>
+
+      </form>
+    </section>
+
+    <!-- Enlace Rápido para consultar la tabla de posiciones -->
+    <section class="pt-2">
+      <a href="../rf-m05-02-tabla-posiciones/TablaPosiciones.html" class="bg-surface-container-low hover:bg-surface-container p-3 rounded-xl flex items-center justify-between border border-surface-bright/30 transition-colors">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-secondary text-lg">leaderboard</span>
+          <span class="font-label-md text-xs text-on-surface font-semibold">Ir a Tabla de Posiciones actualizada</span>
+        </div>
+        <span class="material-symbols-outlined text-outline text-base">arrow_forward</span>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- Bottom Navigation Bar Idéntica a la Referencia -->
+  <nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.6)]">
+    <div class="flex items-center justify-around h-16 px-3">
+      <a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 transition-colors group text-primary-container font-label-md" href="../rf-m05-01-registrar-resultado/RegistrarResultado.html">
+        <span class="material-symbols-outlined text-[22px] group-hover:scale-105 transition-transform">edit_note</span>
+        <span class="font-label-sm text-[10px] uppercase tracking-wide">MARCADOR</span>
+      </a>
+      <a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-primary-container transition-colors group" href="../rf-m05-02-tabla-posiciones/TablaPosiciones.html">
+        <span class="material-symbols-outlined text-[22px] group-hover:scale-105 transition-transform">leaderboard</span>
+        <span class="font-label-sm text-[10px] uppercase tracking-wide">POSICIONES</span>
+      </a>
+      <a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 -mt-3 group" href="#">
+        <div class="w-11 h-11 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shadow-[0_0_16px_rgba(255,94,0,0.35)] group-active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-[26px] font-bold">sports_esports</span>
+        </div>
+        <span class="font-label-sm text-[9px] uppercase tracking-wide text-primary-container mt-0.5 font-bold">EN VIVO</span>
+      </a>
+      <a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] gap-0.5 text-on-surface-variant hover:text-primary-container transition-colors group" href="../rf-m06-01-ranking-general/RankingGeneral.html">
+        <span class="material-symbols-outlined text-[22px] group-hover:scale-105 transition-transform">military_tech</span>
+        <span class="font-label-sm text-[10px] uppercase tracking-wide">RANKING</span>
+      </a>
+    </div>
+  </nav>
+
+  <script>
+    function validateAndSubmit() {
+      const inputA = document.getElementById('score-input-a');
+      const inputB = document.getElementById('score-input-b');
+      const errBox = document.getElementById('error-message-box');
+      const errText = document.getElementById('error-message-text');
+      const succBox = document.getElementById('success-message-box');
+
+      const valA = inputA.value.trim();
+      const valB = inputB.value.trim();
+
+      if (valA === '' || valB === '') {
+        errBox.classList.remove('hidden');
+        succBox.classList.add('hidden');
+        errText.innerText = 'Existen campos vacíos. Debes ingresar el marcador de cada participante.';
+        return;
+      }
+
+      const numA = Number(valA);
+      const numB = Number(valB);
+
+      if (numA < 0 || numB < 0) {
+        errBox.classList.remove('hidden');
+        succBox.classList.add('hidden');
+        errText.innerText = 'No se permiten números negativos. Ingresa un valor mayor o igual a cero.';
+        return;
+      }
+
+      errBox.classList.add('hidden');
+      succBox.classList.remove('hidden');
+    }
+
+    function setScores(a, b) {
+      document.getElementById('score-input-a').value = a;
+      document.getElementById('score-input-b').value = b;
+      validateAndSubmit();
+    }
+  </script>
+
+
+
+</body></html>
