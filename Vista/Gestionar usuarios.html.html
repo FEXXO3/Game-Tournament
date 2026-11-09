@@ -10,12 +10,11 @@
   <link href="https://fonts.googleapis.com" rel="preconnect" />
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
   <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Space+Grotesk:wght@400;600;700&amp;display=swap"
-    rel="stylesheet" />
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&amp;family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-    rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries">
+  </script>
   <script
     id="tailwind-config">tailwind.config = {
         darkMode: "class", theme: {
@@ -117,33 +116,27 @@
 </head>
 
 <body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col">
-  <header
-    class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl border-b border-[#2d2e35] shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
+  <header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/90 backdrop-blur-xl border-b border-[#2d2e35] shadow-[0_2px_12px_rgba(0,0,0,0.6)]">
     <div class="h-16 px-gutter-mobile flex items-center justify-between">
-      <div class="flex items-center gap-space-sm min-w-0"><img alt="GameTournament Logo"
-          class="h-8 w-auto object-contain flex-shrink-0"
-          src="https://lh3.googleusercontent.com/aida/AEtjO1V7DShShH3wL1jJceXJtzzeY0TwSuXpiyykafd5kuMjftaKwDP6P5jCZiNfe4myYnj51hkpDG1zqkEMrYxTzgnenTSHEskj3NHqpnV6PUvUhT_HAqaiRUw3XhrtNb5r9wQP9O6KQE4uTz1xSuDdb2BPhQf938O_UDOXmkMVWg1d_Yh7tD-L9HV2xwvwS7Maqgk__QUAKA9oytIjLwKjDMPn2GgIhKM2oNClvIcqLpsP" />
-        <div class="flex flex-col min-w-0"><span
-            class="font-label-sm text-label-sm text-primary tracking-widest uppercase truncate">GameTournament</span>
-          <h1
-            class="font-headline-sm text-headline-sm text-white uppercase tracking-tight truncate leading-none font-bold">
-            Usuarios</h1>
-        </div>
-      </div>
-      <div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Notificaciones"
-          class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-white hover:bg-surface-container-high transition-colors"
-          type="button"><span class="material-symbols-outlined text-[22px]">notifications</span></button><button
-          aria-label="Perfil de jugador" class="w-11 h-11 flex items-center justify-center" type="button"><img
-            alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/40"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA66Q_DTHhRP4ZgIskfvddKbnbXFpcFXZx3liRkmi7shJS37HaJa-b_K7rFjWI0xrl79uVOFy2lO31x7dqamYngzt2BEhg8Ta0LJTzgUteGrc00ImrCFPDIktPadcsas3AZdcpSlq5VsPlmsWE38RYWPU1Z8ky5z2BKRH8hupXtN_uxH3i6bPPLGJzYL6Zgy2LdpfjhWBUyZBbcBXKmrHFtJTXpBXbnBvJsQVHjXck" /></button>
+      <div class="flex items-center gap-space-sm min-w-0">
+        <img alt="GameTournament Logo" class="h-8 w-auto object-contain flex-shrink-0"src= "https://lh3.googleusercontent.com/aida/AEtjO1V7DShShH3wL1jJceXJtzzeY0TwSuXpiyykafd5kuMjftaKwDP6P5jCZiNfe4myYnj51hkpDG1zqkEMrYxTzgnenTSHEskj3NHqpnV6PUvUhT_HAqaiRUw3XhrtNb5r9wQP9O6KQE4uTz1xSuDdb2BPhQf938O_UDOXmkMVWg1d_Yh7tD-L9HV2xwvwS7Maqgk__QUAKA9oytIjLwKjDMPn2GgIhKM2oNClvIcqLpsP"/>
+      <div class="flex items-center gap-space-xs flex-shrink-0">
+        <button aria-label="Notificaciones"
+class="w-11 h-11 flex items-center justify-center rounded-lg text-on-surface-variant hover:text-white hover:bg-surface-container-high transition-colors"
+          type="button">
+          <span class="material-symbols-outlined text-[22px]">notifications
+          </span>
+        </button>
+        <button aria-label="Perfil de jugador" class="w-11 h-11 flex items-center justify-center" type="button">
+          <img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA66Q_DTHhRP4ZgIskfvddKbnbXFpcFXZx3liRkmi7shJS37HaJa-b_K7rFjWI0xrl79uVOFy2lO31x7dqamYngzt2BEhg8Ta0LJTzgUteGrc00ImrCFPDIktPadcsas3AZdcpSlq5VsPlmsWE38RYWPU1Z8ky5z2BKRH8hupXtN_uxH3i6bPPLGJzYL6Zgy2LdpfjhWBUyZBbcBXKmrHFtJTXpBXbnBvJsQVHjXck" />
+        </button>
       </div>
     </div>
   </header>
   <main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-background px-margin-mobile">
     <div class="flex flex-col w-full pb-10 space-y-space-md">
       <!-- Dynamic Operational Telemetry Ticker -->
-      <div
-        class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-xl relative overflow-hidden border border-[#2d2e35]">
+      <div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-xl relative overflow-hidden border border-[#2d2e35]">
         <div class="absolute -right-8 -top-8 w-32 h-32 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
         <div class="flex flex-col gap-space-sm relative z-10">
           <div class="flex items-center justify-between">
@@ -183,12 +176,12 @@
         </div>
       </div>
       <!-- Search & Filter Console -->
-      <div
-        class="w-full bg-surface-container-low rounded-xl p-space-sm space-y-space-sm shadow-md border border-[#2d2e35]">
+      <div class="w-full bg-surface-container-low rounded-xl p-space-sm space-y-space-sm shadow-md border border-[#2d2e35]">
         <!-- Search Bar -->
         <div class="relative w-full">
           <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-on-surface-variant">
-            <span class="material-symbols-outlined text-[20px]">search</span>
+            <span class="material-symbols-outlined text-[20px]">search
+            </span>
           </div>
           <input
             class="w-full pl-10 pr-10 py-2.5 bg-surface-container-lowest text-white placeholder:text-on-surface-variant/60 font-body-md text-body-md rounded-lg border border-[#2d2e35] focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary shadow-inner"
@@ -200,8 +193,7 @@
         </div>
         <!-- Role Filter Horizontal Scroller -->
         <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1">
-          <button
-            class="flex-shrink-0 px-3 py-1.5 bg-primary text-white font-label-md text-label-md font-bold uppercase rounded-lg shadow-[0_0_12px_rgba(255,94,0,0.35)]">
+          <button class="flex-shrink-0 px-3 py-1.5 bg-primary text-white font-label-md text-label-md font-bold uppercase rounded-lg shadow-[0_0_12px_rgba(255,94,0,0.35)]">
             Todos (260)
           </button>
           <button
@@ -227,20 +219,21 @@
         </div>
         <!-- Status Badges Bar -->
         <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-0.5">
-          <span class="font-label-sm text-label-sm text-on-surface-variant uppercase px-1">Filtro:</span>
-          <button
-            class="flex-shrink-0 flex items-center gap-1 px-2.5 py-1 bg-surface-container border border-[#2d2e35] text-white font-label-sm text-label-sm uppercase rounded">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          <span class="font-label-sm text-label-sm text-on-surface-variant uppercase px-1">Filtro:
+          </span>
+          <button class="flex-shrink-0 flex items-center gap-1 px-2.5 py-1 bg-surface-container border border-[#2d2e35] text-white font-label-sm text-label-sm uppercase rounded">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400">
+            </span>
             Verificados
           </button>
-          <button
-            class="flex-shrink-0 flex items-center gap-1 px-2.5 py-1 bg-surface-container border border-[#2d2e35] text-primary font-label-sm text-label-sm uppercase rounded">
-            <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+          <button class="flex-shrink-0 flex items-center gap-1 px-2.5 py-1 bg-surface-container border border-[#2d2e35] text-primary font-label-sm text-label-sm uppercase rounded">
+            <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse">
+            </span>
             En Revisión Anti-Cheat
           </button>
-          <button
-            class="flex-shrink-0 flex items-center gap-1 px-2.5 py-1 bg-surface-container border border-[#2d2e35] text-error font-label-sm text-label-sm uppercase rounded">
-            <span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+          <button class="flex-shrink-0 flex items-center gap-1 px-2.5 py-1 bg-surface-container border border-[#2d2e35] text-error font-label-sm text-label-sm uppercase rounded">
+            <span class="w-1.5 h-1.5 rounded-full bg-error">
+            </span>
             Sancionados / Banned
           </button>
         </div>
@@ -248,21 +241,18 @@
       <!-- Esports Personnel Roster Cards List -->
       <div class="flex flex-col gap-space-sm w-full">
         <!-- Card 1: Samantha 'Kitsune' Rey -->
-        <div
-          class="bg-surface-container-low rounded-xl p-space-md shadow-lg relative flex flex-col gap-space-sm border border-[#2d2e35]">
+        <div class="bg-surface-container-low rounded-xl p-space-md shadow-lg relative flex flex-col gap-space-sm border border-[#2d2e35]">
           <div class="flex items-start justify-between gap-space-sm">
             <div class="flex items-center gap-3 min-w-0">
               <div class="relative flex-shrink-0">
                 <img class="w-12 h-12 rounded-full object-cover shadow-md border border-[#2d2e35]"
-                  data-alt="Close up portrait of a cyberpunk female esports coach with neon cyan hair highlights, cybernetic earpiece and sleek tactical visor, professional studio lighting in a dark tournament stage arena."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNnGwkMUEkjrIx93xQ-0qDFW220NglHQ3gOENU37_i7tKBcVutRUTulFGOQ2QmB6aLWg-BVWj0zyjv1J-q537clu_aQ4l-6c--D78sQvVhazMPKE_pXq1hVFC-bzpjZ2-KpZJmGYOfeNFsDYwL5XbR6NTzh4h2iBBQB8gzcK9SDybGRnkyt8GcU57C4-R72xDQ6ndWRW738-LXezOXOxOIc4IwmtssloCBOL1LBw4" />
-                <span
-                  class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]"></span>
+                  data-alt="Close up portrait of a cyberpunk female esports coach with neon cyan hair highlights, cybernetic earpiece and sleek tactical visor, professional studio lighting in a dark tournament stage arena."  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNnGwkMUEkjrIx93xQ-0qDFW220NglHQ3gOENU37_i7tKBcVutRUTulFGOQ2QmB6aLWg-BVWj0zyjv1J-q537clu_aQ4l-6c--D78sQvVhazMPKE_pXq1hVFC-bzpjZ2-KpZJmGYOfeNFsDYwL5XbR6NTzh4h2iBBQB8gzcK9SDybGRnkyt8GcU57C4-R72xDQ6ndWRW738-LXezOXOxOIc4IwmtssloCBOL1LBw4" />
+                <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-400 shadow-[0_0_8px_#34d399]">
+                </span>
               </div>
               <div class="flex flex-col min-w-0">
                 <div class="flex items-center gap-1.5 flex-wrap">
-                  <span
-                    class="font-headline-sm text-headline-sm text-white tracking-tight font-bold truncate leading-none">
+                  <span class="font-headline-sm text-headline-sm text-white tracking-tight font-bold truncate leading-none">
                     Samantha 'Kitsune' Rey
                   </span>
                 </div>
@@ -272,12 +262,13 @@
               </div>
             </div>
             <div class="flex flex-col items-end flex-shrink-0">
-              <span
-                class="px-2 py-0.5 bg-surface-container-high border border-emerald-500/30 text-emerald-400 font-label-sm text-label-sm rounded uppercase flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+              <span class="px-2 py-0.5 bg-surface-container-high border border-emerald-500/30 text-emerald-400 font-label-sm text-label-sm rounded uppercase flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping">
+                </span>
                 Verificada
               </span>
-              <span class="font-label-sm text-label-sm text-on-surface-variant mt-1">ID: #CN-8841</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant mt-1">ID: #CN-8841
+              </span>
             </div>
           </div>
           <div
@@ -313,20 +304,17 @@
           </div>
         </div>
         <!-- Card 2: Mateo 'IronClad' Rivas -->
-        <div
-          class="bg-surface-container-low rounded-xl p-space-md shadow-lg relative flex flex-col gap-space-sm border border-[#2d2e35]">
+        <div class="bg-surface-container-low rounded-xl p-space-md shadow-lg relative flex flex-col gap-space-sm border border-[#2d2e35]">
           <div class="flex items-start justify-between gap-space-sm">
             <div class="flex items-center gap-3 min-w-0">
               <div class="relative flex-shrink-0">
-                <img class="w-12 h-12 rounded-full object-cover shadow-md border border-[#2d2e35]"
-                  data-alt="Intense masculine headshot portrait of a veteran esports tournament referee with tactical headset, serious expression, dramatic dark blue backdrop with telemetry light leaks."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuN602N8FfdGqNgos7LFXsx2w7QPrboF1aPwJjY56q62l-wihHw4hcX_G3Gd6BFh05Akm6W6jjMQOl0HIJ2cTauPmTkBQX1HH0PGqkvY7QojddZZl4VEjnmm34GPunn4tlHeEVJrl3FEsYETdsiGYNHt1x7vQsJjC8VteJDNw3cZO5KCmkohAqD0hmvZfKRYDJO0n6VJ-UsP37vQiEX8vFIjLtdwL15oZCsnLQn3E" />
-                <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_#ff5e00]"></span>
+                <img class="w-12 h-12 rounded-full object-cover shadow-md border border-[#2d2e35]"src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuN602N8FfdGqNgos7LFXsx2w7QPrboF1aPwJjY56q62l-wihHw4hcX_G3Gd6BFh05Akm6W6jjMQOl0HIJ2cTauPmTkBQX1HH0PGqkvY7QojddZZl4VEjnmm34GPunn4tlHeEVJrl3FEsYETdsiGYNHt1x7vQsJjC8VteJDNw3cZO5KCmkohAqD0hmvZfKRYDJO0n6VJ-UsP37vQiEX8vFIjLtdwL15oZCsnLQn3E" />
+                <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_#ff5e00]">
+                </span>
               </div>
               <div class="flex flex-col min-w-0">
                 <div class="flex items-center gap-1.5 flex-wrap">
-                  <span
-                    class="font-headline-sm text-headline-sm text-white tracking-tight font-bold truncate leading-none">
+                  <span class="font-headline-sm text-headline-sm text-white tracking-tight font-bold truncate leading-none">
                     Mateo 'IronClad' Rivas
                   </span>
                 </div>
@@ -336,61 +324,61 @@
               </div>
             </div>
             <div class="flex flex-col items-end flex-shrink-0">
-              <span
-                class="px-2 py-0.5 bg-surface-container-high border border-primary/30 text-primary font-label-sm text-label-sm rounded uppercase flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              <span class="px-2 py-0.5 bg-surface-container-high border border-primary/30 text-primary font-label-sm text-label-sm rounded uppercase flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary">
+                </span>
                 En Servicio
               </span>
               <span class="font-label-sm text-label-sm text-on-surface-variant mt-1">LOBBY #07</span>
             </div>
           </div>
-          <div
-            class="bg-surface-container-lowest p-2.5 rounded-lg flex items-center justify-between flex-wrap gap-2 border border-[#2d2e35]">
+          <div class="bg-surface-container-lowest p-2.5 rounded-lg flex items-center justify-between flex-wrap gap-2 border border-[#2d2e35]">
             <div class="flex items-center gap-2">
-              <span
-                class="px-2 py-0.5 bg-[#222329] border border-primary/30 text-white font-label-sm text-label-sm font-bold uppercase rounded">
+              <span class="px-2 py-0.5 bg-[#222329] border border-primary/30 text-white font-label-sm text-label-sm font-bold uppercase rounded">
                 ÁRBITRO OFICIAL
               </span>
-              <span
-                class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold uppercase rounded">
+              <span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold uppercase rounded">
                 HEAD REF (OFICIAL)
               </span>
             </div>
             <div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
-              <span class="material-symbols-outlined text-[16px] text-primary">gavel</span>
+              <span class="material-symbols-outlined text-[16px] text-primary">gavel
+              </span>
               <span>142 Rulings Registrados</span>
             </div>
           </div>
           <div class="flex items-center justify-between pt-1">
             <div class="flex items-center gap-3">
-              <span class="font-label-sm text-label-sm text-on-surface-variant">Incidencias: <span
-                  class="text-white font-bold">0 Pendientes</span></span>
-              <span class="font-label-sm text-label-sm text-on-surface-variant">Canal: <span
-                  class="text-white font-bold">Audio Discord #Ref-1</span></span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">Incidencias:
+                <span class="text-white font-bold">0 Pendientes
+                </span>
+              </span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">Canal: 
+                <span class="text-white font-bold">Audio Discord #Ref-1
+                </span>
+              </span>
             </div>
-            <button
-              class="flex items-center gap-1 px-3 py-1.5 bg-surface-container hover:bg-surface-container-high border border-[#2d2e35] text-primary hover:text-[#ff7526] font-label-md text-label-md uppercase font-bold rounded-lg transition-colors"
-              type="button">
-              <span>Permisos &amp; Logs</span>
-              <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+            <button class="flex items-center gap-1 px-3 py-1.5 bg-surface-container hover:bg-surface-container-high border border-[#2d2e35] text-primary hover:text-[#ff7526] font-label-md text-label-md uppercase   font-bold rounded-lg transition-colors" type="button">
+              <span>Permisos &amp; Logs
+              </span>
+              <span class="material-symbols-outlined text-[16px]">chevron_right
+              </span>
             </button>
           </div>
         </div>
         <!-- Card 3: Diego 'Blaze' Morales -->
-        <div
-          class="bg-surface-container-low rounded-xl p-space-md shadow-lg relative flex flex-col gap-space-sm border border-[#2d2e35]">
+        <div class="bg-surface-container-low rounded-xl p-space-md shadow-lg relative flex flex-col gap-space-sm border border-[#2d2e35]">
           <div class="flex items-start justify-between gap-space-sm">
             <div class="flex items-center gap-3 min-w-0">
               <div class="relative flex-shrink-0">
-                <img class="w-12 h-12 rounded-full object-cover shadow-md border border-[#2d2e35]"
-                  data-alt="Young energetic Latino male competitive gamer wearing team jersey with neon orange and purple crest, tournament stage arena bokeh background."
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvbUiHK0HuWukWFLkjFyeCfn8fJtUlVuY1eC4nR_z5UtKnCTxCMMfbn3v69UcAZKSLjKaq7p_UwB53KDHayMW_1GfUDDPqBcMBpvgxTJY-ZBZ3wkg-CPFRsX3e0glXUsbP3ttvTgWEGoaObBofGXujMsIf_vryvkedQnaickRzl2MeHgnd6ua6rtUqMojmThkMGfhvbzH0jRUBcInCnyAs6wjaMYC9o-2kqcrapq4" />
-                <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_#ff5e00]"></span>
+                <img class="w-12 h-12 rounded-full object-cover shadow-md border border-[#2d2e35]"src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvbUiHK0HuWukWFLkjFyeCfn8fJtUlVuY1eC4nR_z5UtKnCTxCMMfbn3v69UcAZKSLjKaq7p_UwB53KDHayMW_1GfUDDPqBcMBpvgxTJY-ZBZ3wkg-CPFRsX3e0glXUsbP3ttvTgWEGoaObBofGXujMsIf_vryvkedQnaickRzl2MeHgnd6ua6rtUqMojmThkMGfhvbzH0jRUBcInCnyAs6wjaMYC9o-2kqcrapq4" />
+                <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_#ff5e00]">
+                <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_#ff5e00]">
+                </span>
               </div>
               <div class="flex flex-col min-w-0">
                 <div class="flex items-center gap-1.5 flex-wrap">
-                  <span
-                    class="font-headline-sm text-headline-sm text-white tracking-tight font-bold truncate leading-none">
+                  <span class="font-headline-sm text-headline-sm text-white tracking-tight font-bold truncate leading-none">
                     Diego 'Blaze' Morales
                   </span>
                 </div>
@@ -400,61 +388,63 @@
               </div>
             </div>
             <div class="flex flex-col items-end flex-shrink-0">
-              <span
-                class="px-2 py-0.5 bg-surface-container-high border border-primary/40 text-primary font-label-sm text-label-sm rounded uppercase flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+              <span class="px-2 py-0.5 bg-surface-container-high border border-primary/40 text-primary font-label-sm text-label-sm rounded uppercase flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse">
+                </span>
                 Pendiente ID
               </span>
-              <span class="font-label-sm text-label-sm text-error mt-1 font-bold">Falta HWID Scan</span>
+              <span class="font-label-sm text-label-sm text-error mt-1 font-bold">Falta HWID Scan
+              </span>
             </div>
           </div>
-          <div
-            class="bg-surface-container-lowest p-2.5 rounded-lg flex items-center justify-between flex-wrap gap-2 border border-[#2d2e35]">
+          <div class="bg-surface-container-lowest p-2.5 rounded-lg flex items-center justify-between flex-wrap gap-2 border border-[#2d2e35]">
             <div class="flex items-center gap-2">
-              <span
-                class="px-2 py-0.5 bg-[#222329] border border-primary text-primary font-label-sm text-label-sm font-bold uppercase rounded">
+              <span class="px-2 py-0.5 bg-[#222329] border border-primary text-primary font-label-sm text-label-sm font-bold uppercase rounded">
                 PRO PLAYER
               </span>
-              <span
-                class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold uppercase rounded">
+              <span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold uppercase rounded">
                 [VOID SQUAD]
               </span>
             </div>
             <div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
-              <span class="material-symbols-outlined text-[16px] text-primary">memory</span>
-              <span>Hardware hash no firmado</span>
+              <span class="material-symbols-outlined text-[16px] text-primary">memory
+              </span>
+              <span>Hardware hash no firmado
+              </span>
             </div>
           </div>
           <div class="flex items-center justify-between pt-1">
             <div class="flex items-center gap-3">
-              <span class="font-label-sm text-label-sm text-on-surface-variant">Rol In-Game: <span
-                  class="text-white font-bold">Duelista / Entry</span></span>
-              <span class="font-label-sm text-label-sm text-on-surface-variant">Riot ID: <span
-                  class="text-primary font-bold">Blaze#VOID</span></span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">Rol In-Game: 
+                <span class="text-white font-bold">Duelista / Entry
+                </span>
+              </span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">Riot ID: 
+                <span class="text-primary font-bold">Blaze#VOID
+                </span>
+              </span>
             </div>
-            <button
-              class="flex items-center gap-1 px-3 py-1.5 bg-[#222329] hover:bg-primary border border-primary text-primary hover:text-white font-label-md text-label-md uppercase font-bold rounded-lg transition-colors shadow-sm"
-              type="button">
-              <span>Validar Cuenta</span>
-              <span class="material-symbols-outlined text-[16px]">verified</span>
+            <button class="flex items-center gap-1 px-3 py-1.5 bg-[#222329] hover:bg-primary border border-primary text-primary hover:text-white font-label-md text-label-md uppercase font-bold rounded-lg transition-colors shadow-sm"type="button">
+              <span>Validar Cuenta
+              </span>
+              <span class="material-symbols-outlined text-[16px]">verified
+              </span>
             </button>
           </div>
         </div>
         <!-- Card 4: Viktor 'ZeroCool' Petrov -->
-        <div
-          class="bg-surface-container-low rounded-xl p-space-md shadow-lg relative flex flex-col gap-space-sm opacity-90 border border-[#2d2e35]">
+        <div class="bg-surface-container-low rounded-xl p-space-md shadow-lg relative flex flex-col gap-space-sm opacity-90 border border-[#2d2e35]">
           <div class="flex items-start justify-between gap-space-sm">
             <div class="flex items-center gap-3 min-w-0">
               <div class="relative flex-shrink-0">
-                <img class="w-12 h-12 rounded-full object-cover grayscale shadow-md border border-[#2d2e35]"
-                  data-alt="Grayscale tinted portrait of a male esports player behind red holographic glitch interference warning graphics, cybernetic scanner error theme."
+                <img class="w-12 h-12 rounded-full object-cover grayscale shadow-md border border-[#2d2e35]" data-alt="Grayscale tinted portrait of a male esports player behind red holographic glitch interference warning graphics, cybernetic scanner error theme."
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFa-1GOrcWHy-H2fEHT7I5tNhE9Pt1rhGbwNZx5oCjY0YTL_itJtijsGqmCSoBammHjEeCvt5AhKFuBTwDhr4pep0z6-dxBdN263mzfigdKUwlQslBF_fdYxuM6is70NOA6X6ZGSWC9cbIF-kQ1UdrsKWh8bjvKE7r6MS2BqVQgouHTuSda-pZK3hRbCVKh78kyHgGLhCljtkbaguTIPCaoLVUT3jzCFPAvIBypFs" />
-                <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-error shadow-[0_0_8px_#ff5252]"></span>
+                <span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-error shadow-[0_0_8px_#ff5252]">
+                </span>
               </div>
               <div class="flex flex-col min-w-0">
                 <div class="flex items-center gap-1.5 flex-wrap">
-                  <span
-                    class="font-headline-sm text-headline-sm text-on-surface-variant tracking-tight font-bold truncate leading-none line-through">
+                  <span class="font-headline-sm text-headline-sm text-on-surface-variant tracking-tight font-bold truncate leading-none line-through">
                     Viktor 'ZeroCool' Petrov
                   </span>
                 </div>
@@ -464,111 +454,126 @@
               </div>
             </div>
             <div class="flex flex-col items-end flex-shrink-0">
-              <span
-                class="px-2 py-0.5 bg-error-container/80 text-white font-label-sm text-label-sm rounded uppercase flex items-center gap-1">
-                <span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+              <span class="px-2 py-0.5 bg-error-container/80 text-white font-label-sm text-label-sm rounded uppercase flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-error">
+                </span>
                 Sancionado
               </span>
-              <span class="font-label-sm text-label-sm text-error mt-1 font-mono">VAC / SEC-BAN</span>
+              <span class="font-label-sm text-label-sm text-error mt-1 font-mono">VAC / SEC-BAN
+              </span>
             </div>
           </div>
-          <div
-            class="bg-surface-container-lowest p-2.5 rounded-lg flex items-center justify-between flex-wrap gap-2 border border-[#2d2e35]">
+          <div class="bg-surface-container-lowest p-2.5 rounded-lg flex items-center justify-between flex-wrap gap-2 border border-[#2d2e35]">
             <div class="flex items-center gap-2">
-              <span
-                class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold uppercase rounded">
+              <span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-bold uppercase rounded">
                 EX-JUGADOR
               </span>
-              <span
-                class="px-2 py-0.5 bg-error-container/60 text-white font-label-sm text-label-sm font-bold uppercase rounded">
+              <span class="px-2 py-0.5 bg-error-container/60 text-white font-label-sm text-label-sm font-bold uppercase rounded">
                 EXPULSADO TOURNAMENT
               </span>
             </div>
             <div class="flex items-center gap-1 text-error font-label-sm text-label-sm">
-              <span class="material-symbols-outlined text-[16px]">report</span>
-              <span>Infracción: Detección DLL Externa</span>
+              <span class="material-symbols-outlined text-[16px]">report
+              </span>
+              <span>Infracción: Detección DLL Externa
+              </span>
             </div>
           </div>
           <div class="flex items-center justify-between pt-1">
             <div class="flex items-center gap-3">
-              <span class="font-label-sm text-label-sm text-on-surface-variant">Sanción: <span
-                  class="text-error font-bold">12 Meses Roster Lock</span></span>
-              <span class="font-label-sm text-label-sm text-on-surface-variant">Caso: <span
-                  class="text-white font-mono font-bold">#BAN-9921</span></span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">Sanción: 
+                <span class="text-error font-bold">12 Meses Roster Lock
+                </span>
+              </span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">Caso: 
+                <span class="text-white font-mono font-bold">#BAN-9921
+                </span>
+              </span>
             </div>
-            <button
-              class="flex items-center gap-1 px-3 py-1.5 bg-error-container/80 hover:bg-error-container text-white font-label-md text-label-md uppercase font-bold rounded-lg transition-colors"
+            <button class="flex items-center gap-1 px-3 py-1.5 bg-error-container/80 hover:bg-error-container text-white font-label-md text-label-md uppercase font-bold rounded-lg transition-colors"
               type="button">
-              <span>Ver Infracción</span>
-              <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+              <span>Ver Infracción
+              </span>
+              <span class="material-symbols-outlined text-[16px]">open_in_new
+              </span>
             </button>
           </div>
         </div>
       </div>
       <!-- Operational Telemetry Load More & Pagination -->
-      <div
-        class="w-full bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col items-center gap-space-sm border border-[#2d2e35]">
-        <button
-          class="w-full py-2.5 bg-surface-container-high hover:bg-surface-container-highest border border-[#2d2e35] text-white font-headline-sm text-sm font-bold uppercase rounded-lg flex items-center justify-center gap-2 transition-all hover:border-primary/50"
+      <div class="w-full bg-surface-container-low rounded-xl p-space-md shadow-md flex flex-col items-center gap-space-sm border border-[#2d2e35]">
+        <button class="w-full py-2.5 bg-surface-container-high hover:bg-surface-container-highest border border-[#2d2e35] text-white font-headline-sm text-sm font-bold uppercase rounded-lg flex items-center justify-center gap-2 transition-all hover:border-primary/50"
           type="button">
-          <span class="material-symbols-outlined text-[20px] text-primary">refresh</span>
-          <span>Cargar más participantes (4 de 260)</span>
+          <span class="material-symbols-outlined text-[20px] text-primary">refresh
+          </span>
+          <span>Cargar más participantes (4 de 260)
+          </span>
         </button>
         <div class="flex items-center justify-between w-full pt-1 px-1">
           <span class="font-label-md text-label-md text-on-surface-variant">
-            Página <span class="text-white font-bold">1</span> de <span class="text-white">65</span>
+            Página 
+            <span class="text-white font-bold">1
+            </span> de 
+            <span class="text-white">65
+            </span>
           </span>
           <div class="flex items-center gap-1">
-            <button
-              class="w-8 h-8 rounded bg-surface-container-high border border-[#2d2e35] text-on-surface-variant flex items-center justify-center opacity-50 cursor-not-allowed"
+            <button class="w-8 h-8 rounded bg-surface-container-high border border-[#2d2e35] text-on-surface-variant flex items-center justify-center opacity-50 cursor-not-allowed"
               type="button">
-              <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+              <span class="material-symbols-outlined text-[18px]">chevron_left
+              </span>
             </button>
-            <button
-              class="w-8 h-8 rounded bg-primary text-white font-label-md text-label-md font-bold flex items-center justify-center shadow-[0_0_8px_rgba(255,94,0,0.4)]"
+            <button class="w-8 h-8 rounded bg-primary text-white font-label-md text-label-md font-bold flex items-center justify-center shadow-[0_0_8px_rgba(255,94,0,0.4)]"
               type="button">
               1
             </button>
-            <button
-              class="w-8 h-8 rounded bg-surface-container-high border border-[#2d2e35] text-on-surface-variant hover:text-white hover:border-primary font-label-md text-label-md flex items-center justify-center transition-colors"
-              type="button">
+            <button class="w-8 h-8 rounded bg-surface-container-high border border-[#2d2e35] text-on-surface-variant hover:text-white hover:border-primary font-label-md text-label-md flex items-center justify-center transition-colors" type="button">
               2
             </button>
-            <button
-              class="w-8 h-8 rounded bg-surface-container-high border border-[#2d2e35] text-on-surface-variant hover:text-white hover:border-primary font-label-md text-label-md flex items-center justify-center transition-colors"
-              type="button">
+            <button class="w-8 h-8 rounded bg-surface-container-high border border-[#2d2e35] text-on-surface-variant hover:text-white hover:border-primary font-label-md text-label-md flex items-center justify-center transition-colors" type="button">
               3
             </button>
-            <button
-              class="w-8 h-8 rounded bg-surface-container-high border border-[#2d2e35] text-on-surface hover:text-primary flex items-center justify-center transition-colors"
-              type="button">
-              <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+            <button class="w-8 h-8 rounded bg-surface-container-high border border-[#2d2e35] text-on-surface hover:text-primary flex items-center justify-center transition-colors" type="button">
+              <span class="material-symbols-outlined text-[18px]">chevron_right
+              </span>
             </button>
           </div>
         </div>
       </div>
       <!-- Floating Action Button (FAB) -->
       <div class="fixed bottom-20 right-4 z-40">
-        <button aria-label="Registrar nuevo competidor u oficial"
-          class="w-14 h-14 rounded-full bg-primary hover:bg-[#ff7526] text-white flex items-center justify-center shadow-[0_0_25px_rgba(255,94,0,0.65)] active:scale-90 transition-transform cursor-pointer"
-          type="button">
-          <span class="material-symbols-outlined text-[30px] font-bold">add</span>
+        <button aria-label="Registrar nuevo competidor u oficial"class="w-14 h-14 rounded-full bg-primary hover:bg-[#ff7526] text-white flex items-center justify-center shadow-[0_0_25px_rgba(255,94,0,0.65)] active:scale-90 transition-transform cursor-pointer" type="button">
+          <span class="material-symbols-outlined text-[30px] font-bold">add
+          </span>
         </button>
       </div>
     </div>
   </main>
-  <nav
-    class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl border-t border-[#2d2e35] shadow-[0_-2px_12px_rgba(0,0,0,0.6)]">
-    <div class="flex justify-around items-center h-16 px-gutter-mobile"><a
-        class="flex flex-col items-center justify-center gap-space-xs min-w-[72px] h-12 text-on-surface-variant hover:text-white transition-colors"
-        data-path="estadisticas" href="#"><span class="material-symbols-outlined text-[24px]">query_stats</span><span
-          class="font-label-sm text-label-sm uppercase tracking-wider">Estadísticas</span></a><a aria-current="page"
+  <nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl border-t border-[#2d2e35] shadow-[0_-2px_12px_rgba(0,0,0,0.6)]">
+    <div class="flex justify-around items-center h-16 px-gutter-mobile">
+      <a class="flex flex-col items-center justify-center gap-space-xs min-w-[72px] h-12 text-on-surface-variant hover:text-white transition-colors"
+        data-path="estadisticas" href="#">
+        <span class="material-symbols-outlined text-[24px]">query_stats
+        </span>
+        <span class="font-label-sm text-label-sm uppercase tracking-wider">Estadísticas
+        </span>
+      </a>
+      <a aria-current="page"
         class="flex flex-col items-center justify-center gap-space-xs min-w-[72px] h-12 transition-colors text-primary font-bold"
-        data-path="usuarios" href="#"><span class="material-symbols-outlined text-[24px]">group</span><span
-          class="font-label-sm text-label-sm uppercase tracking-wider">Usuarios</span></a><a
-        class="flex flex-col items-center justify-center gap-space-xs min-w-[72px] h-12 text-on-surface-variant hover:text-white transition-colors"
-        data-path="validacion" href="#"><span class="material-symbols-outlined text-[24px]">fact_check</span><span
-          class="font-label-sm text-label-sm uppercase tracking-wider">Validación</span></a></div>
+        data-path="usuarios" href="#">
+        <span class="material-symbols-outlined text-[24px]">group
+        </span>
+        <span class="font-label-sm text-label-sm uppercase tracking-wider">Usuarios
+        </span>
+        </a>
+        <a class="flex flex-col items-center justify-center gap-space-xs min-w-[72px] h-12 text-on-surface-variant hover:text-white transition-colors"
+        data-path="validacion" href="#">
+        <span class="material-symbols-outlined text-[24px]">fact_check
+        </span>
+        <span class="font-label-sm text-label-sm uppercase tracking-wider">Validación
+        </span>
+      </a>
+    </div>
   </nav>
 </body>
 
