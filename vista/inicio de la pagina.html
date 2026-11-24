@@ -1,0 +1,537 @@
+<!DOCTYPE html><html lang="es" class="dark"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Tournament — Torneos de Videojuegos en Colombia</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'surface': '#0f131d',
+        'on-surface': '#dfe2f1',
+        'surface-container-lowest': '#0a0e18',
+        'surface-container-low': '#171b26',
+        'surface-container': '#1c1f2a',
+        'surface-container-high': '#262a35',
+        'surface-container-highest': '#313540',
+        'on-surface-variant': '#e4bfb1',
+        'primary': '#ffb599',
+        'on-primary': '#5a1c00',
+        'primary-container': '#ff5e00',
+        'on-primary-container': '#240800',
+        'secondary': '#d3fbff',
+        'on-secondary': '#00363a',
+        'secondary-container': '#00eefc',
+        'on-secondary-container': '#00393e',
+        'tertiary': '#ffba20',
+        'on-tertiary': '#332200',
+        'error': '#ffb4ab',
+        'on-error': '#690005',
+        'error-container': '#93000a',
+        'on-error-container': '#ffdad6',
+        'outline': '#ab897d',
+        'outline-variant': '#5b4137',
+      },
+      borderRadius: {
+        'sm': '4px',
+        'DEFAULT': '6px',
+        'md': '8px',
+        'lg': '12px',
+        'xl': '16px',
+        'full': '9999px',
+      },
+      spacing: {
+        'xs': '4px',
+        'sm': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        '2xl': '32px',
+        '3xl': '48px',
+      },
+      fontFamily: {
+        'display': ['"Space Grotesk"', 'sans-serif'],
+        'headline': ['"Space Grotesk"', 'sans-serif'],
+        'body': ['"Hanken Grotesk"', 'sans-serif'],
+        'label': ['"Space Grotesk"', 'sans-serif'],
+        'mono': ['"JetBrains Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['44px', { lineHeight: '50px', letterSpacing: '-1px', fontWeight: '700' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg': ['28px', { lineHeight: '34px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-md': ['20px', { lineHeight: '26px', letterSpacing: '-0.2px', fontWeight: '600' }],
+        'headline-sm': ['16px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '600' }],
+        'body-lg': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-sm': ['12px', { lineHeight: '18px', letterSpacing: '0.1px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '18px', letterSpacing: '0.3px', fontWeight: '600' }],
+        'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.5px', fontWeight: '700' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.4px', fontWeight: '600' }],
+      },
+      transitionDuration: {
+        'state-change': '120ms',
+        'surface-enter': '240ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      line-height: 1 !important;
+      box-sizing: content-box;
+      overflow: hidden;
+      white-space: nowrap;
+      direction: ltr;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container">
+  <div class="min-h-[1024px] flex flex-col bg-surface" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-surface-container-lowest border-b border-outline-variant/40">
+      <div class="max-w-7xl mx-auto px-lg md:px-xl h-16 flex items-center justify-between gap-lg">
+        <a href="#top" class="flex items-center gap-md min-w-0">
+          <div class="w-9 h-9 rounded-md bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-headline-md" aria-hidden="true">sports_esports</span>
+          </div>
+          <span class="font-headline text-headline-sm text-on-surface tracking-tight truncate">Game Tournament</span>
+        </a>
+
+        <nav aria-label="Navegación principal" class="hidden md:flex items-center gap-xl">
+          <a href="#torneos" class="font-label text-label-lg text-on-surface hover:text-primary transition-colors duration-state-change ease-state-change">Torneos</a>
+          <a href="#horarios" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change ease-state-change">Enfrentamientos</a>
+          <a href="#ranking" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change ease-state-change">Ranking</a>
+          <a href="#roles" class="font-label text-label-lg text-on-surface-variant hover:text-primary transition-colors duration-state-change ease-state-change">Organizadores</a>
+        </nav>
+
+        <div class="flex items-center gap-sm shrink-0">
+          <button type="button" onclick="openAccessModal(&#39;login&#39;)" class="hidden sm:inline-flex items-center justify-center px-md py-sm rounded-md bg-surface-container-high text-on-surface border border-outline-variant hover:bg-surface-container-highest transition-colors duration-state-change ease-state-change">
+            <span data-design-text-token="label-lg" class="font-label text-label-lg">Iniciar sesión</span>
+          </button>
+          <button type="button" onclick="openAccessModal(&#39;register&#39;)" data-component-id="button-primary" data-component-type="button" data-component-variant="primary" class="inline-flex items-center justify-center px-lg py-sm rounded-md bg-primary-container text-on-primary-container font-label hover:brightness-110 active:scale-95 transition-transform duration-state-change ease-state-change">
+            <span data-design-text-token="label-lg" class="font-label text-label-lg">Registrarse</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top" class="flex-1 flex flex-col gap-3xl pb-3xl">
+
+      <!-- Hero Section -->
+      <section class="bg-surface-container-lowest border-b border-outline-variant/30">
+        <div class="max-w-7xl mx-auto px-lg md:px-xl py-2xl md:py-3xl grid grid-cols-1 lg:grid-cols-12 gap-xl items-center">
+          <div class="lg:col-span-7 flex flex-col gap-lg">
+            <div class="flex flex-wrap items-center gap-sm">
+              <span data-component-id="badge-status" data-component-type="badge" data-component-variant="status" role="status" class="inline-flex items-center gap-xs px-sm py-xs rounded-sm bg-secondary-container text-on-secondary-container font-label uppercase">
+                <span data-design-text-token="label-md" class="text-label-md">Temporada Colombia 2026</span>
+              </span>
+              <span class="font-body text-body-sm text-on-surface-variant">Abierto a jugadores y organizadores</span>
+            </div>
+
+            <h1 class="font-display text-display-lg-mobile md:text-display-lg text-on-surface text-balance">
+              Compite, organiza y escala en el <span class="text-primary">ranking nacional</span>
+            </h1>
+
+            <p class="font-body text-body-lg text-on-surface-variant max-w-prose text-pretty">
+              Crea torneos de videojuegos, inscribe tu escuadra en segundos, consulta horarios de enfrentamientos y sigue las tablas de posiciones en tiempo real.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-md pt-xs">
+              <a href="#torneos" data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" class="inline-flex items-center justify-center gap-sm px-lg py-md rounded-md bg-primary-container text-on-primary-container font-label hover:brightness-110 active:scale-95 transition-transform duration-state-change ease-state-change">
+                <span class="material-symbols-outlined text-headline-sm" aria-hidden="true">emoji_events</span>
+                <span data-design-text-token="label-lg" class="font-label text-label-lg">Explorar torneos</span>
+              </a>
+              <button type="button" onclick="openAccessModal(&#39;create&#39;)" data-component-id="button-secondary" data-component-type="button" data-component-variant="secondary" class="inline-flex items-center justify-center gap-sm px-lg py-md rounded-md bg-surface-container-high text-on-surface border border-outline-variant hover:bg-surface-container-highest active:scale-95 transition-colors duration-state-change ease-state-change">
+                <span data-design-text-token="label-lg" class="font-label text-label-lg">Crear torneo</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Featured Tournament Spotlight -->
+          <div class="lg:col-span-5">
+            <article class="rounded-xl overflow-hidden bg-surface-container border border-outline-variant/50 flex flex-col">
+              <div class="relative">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrARdp3exwV6_jCMoRjPbeP86PeaGRQxl-SU9AoIImWO7pxIdLm6t5gN1WGkLTL09pQGFfYf44yWYk2ECcxTd6QwYQ67aaIpX8OaiPEwAEe_Di1w1aiI-tBX22OpXVjCeFujutKvhsmZ9qnG0QmKl4TjqshG8v9wn74hEruk35kq_CzY1bk3MbDVSaNY7rsBr-HrL5TTX0ZyK0ahzIXzIyNggRrKqe917iDMhvTT5tti4w2eY0vtzROkBDXFgQ" alt="Escenario oficial de la Copa Invitational VALORANT Masters" class="w-full h-56 object-cover">
+              </div>
+              <div class="p-xl flex flex-col gap-md">
+                <div class="flex items-center justify-between gap-sm">
+                  <span class="px-sm py-xs rounded-sm bg-primary-container text-on-primary-container font-label text-label-md uppercase">Inscripción Abierta</span>
+                  <span class="font-mono text-mono-sm text-secondary tabular-nums">14/16 Cupos</span>
+                </div>
+                <div class="flex flex-col gap-xs">
+                  <h2 class="font-headline text-headline-md text-on-surface">Copa Invitational VALORANT Masters</h2>
+                  <p class="font-body text-body-md text-on-surface-variant">Nexus Esports League · Inicio 15 Nov · Prize Pool $1,500 USD</p>
+                </div>
+                <div class="pt-sm border-t border-outline-variant/30 flex items-center justify-between gap-md">
+                  <span class="font-body text-body-sm text-outline">5v5 PC · Servidor LATAM</span>
+                  <a href="../../uploads/inscribirse-a-un-torneo-html-2a761b.html" class="inline-flex items-center gap-xs px-md py-sm rounded-md bg-primary-container text-on-primary-container font-label text-label-md hover:brightness-110 transition-transform duration-state-change ease-state-change">
+                    <span>Inscribirse</span>
+                    <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Active Tournaments Section (M02 + M03) -->
+      <section id="torneos" class="max-w-7xl w-full mx-auto px-lg md:px-xl flex flex-col gap-xl">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-lg">
+          <div class="flex flex-col gap-xs">
+            <span class="font-label text-label-md text-primary uppercase">Competencias</span>
+            <h2 class="font-headline text-headline-lg text-on-surface">Torneos disponibles</h2>
+          </div>
+
+          <div role="tablist" aria-label="Filtrar torneos por estado" class="inline-flex flex-wrap items-center gap-xs p-xs rounded-lg bg-surface-container-low border border-outline-variant/40">
+            <button type="button" role="tab" aria-selected="true" onclick="filterTournaments(&#39;ALL&#39;, this)" class="tour-filter px-md py-sm rounded-md bg-primary-container text-on-primary-container font-label text-label-md transition-colors duration-state-change ease-state-change">Todos</button>
+            <button type="button" role="tab" aria-selected="false" onclick="filterTournaments(&#39;abierto&#39;, this)" class="tour-filter px-md py-sm rounded-md bg-transparent text-on-surface-variant hover:bg-surface-container-high font-label text-label-md transition-colors duration-state-change ease-state-change">Abiertos</button>
+            <button type="button" role="tab" aria-selected="false" onclick="filterTournaments(&#39;en-curso&#39;, this)" class="tour-filter px-md py-sm rounded-md bg-transparent text-on-surface-variant hover:bg-surface-container-high font-label text-label-md transition-colors duration-state-change ease-state-change">En curso</button>
+            <button type="button" role="tab" aria-selected="false" onclick="filterTournaments(&#39;finalizado&#39;, this)" class="tour-filter px-md py-sm rounded-md bg-transparent text-on-surface-variant hover:bg-surface-container-high font-label text-label-md transition-colors duration-state-change ease-state-change">Finalizados</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-lg items-stretch">
+          <!-- Tournament 1 -->
+          <article data-status="abierto" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="tour-card p-xl rounded-lg bg-surface-container border border-secondary-container/60 flex flex-col justify-between gap-lg h-full">
+            <div class="flex flex-col gap-md">
+              <header class="flex items-start justify-between gap-md">
+                <div class="flex flex-col gap-xs">
+                  <span class="font-mono text-mono-sm text-secondary">VALORANT · 5v5</span>
+                  <h3 class="font-headline text-headline-sm text-on-surface">Copa Invitational Masters</h3>
+                </div>
+                <span class="px-sm py-xs rounded-sm bg-primary-container text-on-primary-container font-label text-label-md uppercase shrink-0">Abierto</span>
+              </header>
+              <p class="font-body text-body-md text-on-surface-variant text-pretty">
+                Fase suiza Bo1 y playoffs Bo3. Cierre de registros el 12 de noviembre con servidores 128-tick.
+              </p>
+              <div class="flex items-center justify-between font-mono text-mono-sm text-outline pt-xs">
+                <span class="tabular-nums">14/16 Equipos</span>
+                <span class="text-tertiary tabular-nums">$1,500 USD</span>
+              </div>
+            </div>
+            <footer class="pt-md border-t border-outline-variant/30 flex items-center justify-between gap-md">
+              <span class="font-body text-body-sm text-on-surface-variant">Cuota: $50 USD</span>
+              <a href="../../uploads/inscribirse-a-un-torneo-html-2a761b.html" class="inline-flex items-center gap-xs px-md py-sm rounded-md bg-primary-container text-on-primary-container font-label text-label-md hover:brightness-110 transition-transform duration-state-change ease-state-change">
+                <span>Inscribirse</span>
+                <span class="material-symbols-outlined text-body-lg" aria-hidden="true">open_in_new</span>
+              </a>
+            </footer>
+          </article>
+
+          <!-- Tournament 2 -->
+          <article data-status="abierto" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="tour-card p-xl rounded-lg bg-surface-container border border-outline-variant/50 flex flex-col justify-between gap-lg hover:border-primary/60 transition-colors duration-state-change ease-state-change h-full">
+            <div class="flex flex-col gap-md">
+              <header class="flex items-start justify-between gap-md">
+                <div class="flex flex-col gap-xs">
+                  <span class="font-mono text-mono-sm text-secondary">FC 26 · 1v1</span>
+                  <h3 class="font-headline text-headline-sm text-on-surface">Liga Andina Apertura</h3>
+                </div>
+                <span class="px-sm py-xs rounded-sm bg-primary-container text-on-primary-container font-label text-label-md uppercase shrink-0">Abierto</span>
+              </header>
+              <p class="font-body text-body-md text-on-surface-variant text-pretty">
+                Torneo individual de eliminación directa con partidos de ida y vuelta en consola y PC.
+              </p>
+              <div class="flex items-center justify-between font-mono text-mono-sm text-outline pt-xs">
+                <span class="tabular-nums">26/32 Jugadores</span>
+                <span class="text-tertiary tabular-nums">$2.0M COP</span>
+              </div>
+            </div>
+            <footer class="pt-md border-t border-outline-variant/30 flex items-center justify-between gap-md">
+              <span class="font-body text-body-sm text-on-surface-variant">Inscripción gratuita</span>
+              <button type="button" onclick="openAccessModal(&#39;register&#39;)" class="inline-flex items-center gap-xs px-md py-sm rounded-md bg-surface-container-high text-on-surface border border-outline-variant hover:bg-primary-container hover:text-on-primary-container hover:border-primary-container font-label text-label-md transition-colors duration-state-change ease-state-change">
+                <span>Inscribirse</span>
+                <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+              </button>
+            </footer>
+          </article>
+
+          <!-- Tournament 3 -->
+          <article data-status="en-curso" data-component-id="card-action" data-component-type="card" data-component-variant="action" class="tour-card p-xl rounded-lg bg-surface-container border border-outline-variant/50 flex flex-col justify-between gap-lg hover:border-primary/60 transition-colors duration-state-change ease-state-change h-full">
+            <div class="flex flex-col gap-md">
+              <header class="flex items-start justify-between gap-md">
+                <div class="flex flex-col gap-xs">
+                  <span class="font-mono text-mono-sm text-secondary">FORTNITE · DUOS</span>
+                  <h3 class="font-headline text-headline-sm text-on-surface">Serie Nacional Battle Cup</h3>
+                </div>
+                <span class="px-sm py-xs rounded-sm bg-secondary-container text-on-secondary-container font-label text-label-md uppercase shrink-0">En curso</span>
+              </header>
+              <p class="font-body text-body-md text-on-surface-variant text-pretty">
+                Cuatro salas clasificatorias acumulando puntos por eliminación y posición final en tabla.
+              </p>
+              <div class="flex items-center justify-between font-mono text-mono-sm text-outline pt-xs">
+                <span class="tabular-nums">50/50 Dúos</span>
+                <span class="text-tertiary tabular-nums">$3.5M COP</span>
+              </div>
+            </div>
+            <footer class="pt-md border-t border-outline-variant/30 flex items-center justify-between gap-md">
+              <span class="font-body text-body-sm text-on-surface-variant">Ronda 3 activa</span>
+              <a href="#horarios" class="inline-flex items-center gap-xs px-md py-sm rounded-md bg-surface-container-high text-on-surface border border-outline-variant hover:bg-primary-container hover:text-on-primary-container hover:border-primary-container font-label text-label-md transition-colors duration-state-change ease-state-change">
+                <span>Ver tabla</span>
+                <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+              </a>
+            </footer>
+          </article>
+        </div>
+      </section>
+
+      <!-- Schedules & Live Standings Split (M04 + M05) -->
+      <section id="horarios" class="max-w-7xl w-full mx-auto px-lg md:px-xl grid grid-cols-1 lg:grid-cols-12 gap-xl items-start">
+
+        <!-- Upcoming Matches & Schedules -->
+        <div class="lg:col-span-7 flex flex-col gap-lg">
+          <div class="flex items-center justify-between gap-md">
+            <div class="flex flex-col gap-xs">
+              <span class="font-label text-label-md text-secondary uppercase">Enfrentamientos y Horarios</span>
+              <h2 class="font-headline text-headline-md text-on-surface">Próximas partidas</h2>
+            </div>
+            <span class="font-mono text-mono-sm text-outline">GMT-5 Colombia</span>
+          </div>
+
+          <div class="flex flex-col gap-md">
+            <article class="p-lg rounded-lg bg-surface-container-low border border-outline-variant/40 flex flex-col sm:flex-row sm:items-center justify-between gap-md">
+              <div class="flex flex-col gap-xs">
+                <span class="font-mono text-mono-sm text-primary">Hoy · 19:00 hrs</span>
+                <h3 class="font-headline text-headline-sm text-on-surface">KRÜ Academy vs Leviatán Jr</h3>
+                <span class="font-body text-body-sm text-on-surface-variant">Copa Invitational VALORANT · Cuartos de final</span>
+              </div>
+              <span class="px-sm py-xs rounded-sm bg-surface-container-high text-secondary font-label text-label-md uppercase self-start sm:self-center">Bo3</span>
+            </article>
+
+            <article class="p-lg rounded-lg bg-surface-container-low border border-outline-variant/40 flex flex-col sm:flex-row sm:items-center justify-between gap-md">
+              <div class="flex flex-col gap-xs">
+                <span class="font-mono text-mono-sm text-primary">Hoy · 20:30 hrs</span>
+                <h3 class="font-headline text-headline-sm text-on-surface">Furious Gaming vs Nocturns Esports</h3>
+                <span class="font-body text-body-sm text-on-surface-variant">Copa Invitational VALORANT · Cuartos de final</span>
+              </div>
+              <span class="px-sm py-xs rounded-sm bg-surface-container-high text-secondary font-label text-label-md uppercase self-start sm:self-center">Bo3</span>
+            </article>
+
+            <article class="p-lg rounded-lg bg-surface-container-low border border-outline-variant/40 flex flex-col sm:flex-row sm:items-center justify-between gap-md">
+              <div class="flex flex-col gap-xs">
+                <span class="font-mono text-mono-sm text-outline">Mañana · 18:00 hrs</span>
+                <h3 class="font-headline text-headline-sm text-on-surface">MateoVal99 vs SantiPro_CO</h3>
+                <span class="font-body text-body-sm text-on-surface-variant">Liga Andina Apertura FC 26 · Octavos</span>
+              </div>
+              <span class="px-sm py-xs rounded-sm bg-surface-container-high text-on-surface-variant font-label text-label-md uppercase self-start sm:self-center">Ida/Vuelta</span>
+            </article>
+          </div>
+        </div>
+
+        <!-- Standings & National Ranking (M05 + M06) -->
+        <div id="ranking" class="lg:col-span-5 flex flex-col gap-lg">
+          <div class="flex items-center justify-between gap-md">
+            <div class="flex flex-col gap-xs">
+              <span class="font-label text-label-md text-tertiary uppercase">Clasificación General</span>
+              <h2 class="font-headline text-headline-md text-on-surface">Top Ranking</h2>
+            </div>
+            <span class="font-mono text-mono-sm text-outline">Puntos acumulados</span>
+          </div>
+
+          <div class="rounded-lg bg-surface-container-low border border-outline-variant/40 overflow-hidden">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-outline-variant/40 bg-surface-container">
+                  <th class="py-md px-lg font-label text-label-md text-on-surface uppercase">#</th>
+                  <th class="py-md px-lg font-label text-label-md text-on-surface uppercase">Jugador</th>
+                  <th class="py-md px-lg font-label text-label-md text-on-surface uppercase text-right">Victorias</th>
+                  <th class="py-md px-lg font-label text-label-md text-on-surface uppercase text-right">Pts</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-outline-variant/20 font-body text-body-md">
+                <tr class="hover:bg-surface-container/60">
+                  <td class="py-md px-lg font-mono text-mono-sm text-tertiary tabular-nums">01</td>
+                  <td class="py-md px-lg text-on-surface font-medium">ShadowKRU</td>
+                  <td class="py-md px-lg text-right text-on-surface-variant tabular-nums">42</td>
+                  <td class="py-md px-lg text-right font-mono text-mono-sm text-primary tabular-nums">2,480</td>
+                </tr>
+                <tr class="hover:bg-surface-container/60">
+                  <td class="py-md px-lg font-mono text-mono-sm text-on-surface-variant tabular-nums">02</td>
+                  <td class="py-md px-lg text-on-surface font-medium">Valkyrie_CO</td>
+                  <td class="py-md px-lg text-right text-on-surface-variant tabular-nums">38</td>
+                  <td class="py-md px-lg text-right font-mono text-mono-sm text-primary tabular-nums">2,310</td>
+                </tr>
+                <tr class="hover:bg-surface-container/60">
+                  <td class="py-md px-lg font-mono text-mono-sm text-on-surface-variant tabular-nums">03</td>
+                  <td class="py-md px-lg text-on-surface font-medium">BogotaCarry</td>
+                  <td class="py-md px-lg text-right text-on-surface-variant tabular-nums">35</td>
+                  <td class="py-md px-lg text-right font-mono text-mono-sm text-primary tabular-nums">2,195</td>
+                </tr>
+                <tr class="hover:bg-surface-container/60">
+                  <td class="py-md px-lg font-mono text-mono-sm text-on-surface-variant tabular-nums">04</td>
+                  <td class="py-md px-lg text-on-surface font-medium">MDE_Titan</td>
+                  <td class="py-md px-lg text-right text-on-surface-variant tabular-nums">31</td>
+                  <td class="py-md px-lg text-right font-mono text-mono-sm text-primary tabular-nums">1,980</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- Role-based Platform Entry Points (M01 - M07) -->
+      <section id="roles" class="max-w-7xl w-full mx-auto px-lg md:px-xl flex flex-col gap-xl">
+        <div class="flex flex-col gap-xs">
+          <span class="font-label text-label-md text-primary uppercase">Accesos del Sistema</span>
+          <h2 class="font-headline text-headline-lg text-on-surface">Herramientas según tu rol</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-lg items-stretch">
+          <article class="p-xl rounded-lg bg-surface-container-low border border-outline-variant/40 flex flex-col justify-between gap-lg h-full">
+            <div class="flex flex-col gap-sm">
+              <span class="material-symbols-outlined text-primary text-headline-lg" aria-hidden="true">person</span>
+              <h3 class="font-headline text-headline-md text-on-surface">Para Jugadores</h3>
+              <p class="font-body text-body-md text-on-surface-variant text-pretty">
+                Regístrate, inscríbete en torneos con cupo disponible, consulta tus horarios y revisa tus estadísticas e historial de trofeos.
+              </p>
+            </div>
+            <a href="../../uploads/inscribirse-a-un-torneo-html-2a761b.html" class="font-label text-label-lg text-primary hover:underline inline-flex items-center gap-xs">
+              <span>Ir a inscripción</span>
+              <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+            </a>
+          </article>
+
+          <article class="p-xl rounded-lg bg-surface-container-low border border-outline-variant/40 flex flex-col justify-between gap-lg h-full">
+            <div class="flex flex-col gap-sm">
+              <span class="material-symbols-outlined text-secondary text-headline-lg" aria-hidden="true">event_note</span>
+              <h3 class="font-headline text-headline-md text-on-surface">Para Organizadores</h3>
+              <p class="font-body text-body-md text-on-surface-variant text-pretty">
+                Crea torneos, aprueba o rechaza inscripciones, genera llaves de eliminación o grupos, publica horarios y registra marcadores.
+              </p>
+            </div>
+            <button type="button" onclick="openAccessModal(&#39;create&#39;)" class="font-label text-label-lg text-secondary hover:underline inline-flex items-center gap-xs text-left">
+              <span>Crear un torneo</span>
+              <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+            </button>
+          </article>
+
+          <article class="p-xl rounded-lg bg-surface-container-low border border-outline-variant/40 flex flex-col justify-between gap-lg h-full">
+            <div class="flex flex-col gap-sm">
+              <span class="material-symbols-outlined text-tertiary text-headline-lg" aria-hidden="true">admin_panel_settings</span>
+              <h3 class="font-headline text-headline-md text-on-surface">Administración y Moderación</h3>
+              <p class="font-body text-body-md text-on-surface-variant text-pretty">
+                Supervisa cuentas y roles, resuelve desacuerdos en partidas y corrige resultados o horarios desde el panel administrativo.
+              </p>
+            </div>
+            <button type="button" onclick="openAccessModal(&#39;login&#39;)" class="font-label text-label-lg text-tertiary hover:underline inline-flex items-center gap-xs text-left">
+              <span>Acceso administrativo</span>
+              <span class="material-symbols-outlined text-body-lg" aria-hidden="true">arrow_forward</span>
+            </button>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest border-t border-outline-variant/30 py-xl px-lg md:px-xl">
+      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-md font-body text-body-sm text-outline">
+        <span>Game Tournament · Plataforma de Torneos de Videojuegos en Colombia</span>
+        <span>Cumplimiento Ley 1581 de 2012 y Ley 2507 de 2025</span>
+      </div>
+    </footer>
+
+    <!-- Quick Auth / Action Modal (M01 / M02) -->
+    <div id="accessModal" class="fixed inset-0 z-50 hidden items-center justify-center p-lg bg-surface-container-lowest/80" role="dialog" aria-modal="true" aria-labelledby="accessModalTitle">
+      <div class="w-full max-w-md rounded-xl bg-surface-container border border-outline-variant/60 p-xl flex flex-col gap-lg">
+        <header class="flex items-start justify-between gap-md">
+          <div class="flex flex-col gap-xs">
+            <span id="accessModalEyebrow" class="font-mono text-mono-sm text-primary uppercase">Acceso</span>
+            <h3 id="accessModalTitle" class="font-headline text-headline-md text-on-surface">Iniciar sesión</h3>
+          </div>
+          <button type="button" onclick="closeAccessModal()" aria-label="Cerrar ventana" class="inline-flex items-center justify-center w-10 h-10 rounded-md bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors duration-state-change ease-state-change shrink-0">
+            <span class="material-symbols-outlined text-headline-md" aria-hidden="true">close</span>
+          </button>
+        </header>
+
+        <form onsubmit="event.preventDefault(); closeAccessModal();" class="flex flex-col gap-md">
+          <div class="flex flex-col gap-xs">
+            <label for="modalEmail" class="font-label text-label-md text-on-surface uppercase">Correo electrónico</label>
+            <input id="modalEmail" type="email" required placeholder="jugador@gametournament.co" class="w-full h-11 px-md rounded-md bg-surface-container-low border border-outline-variant text-on-surface placeholder:text-outline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus:border-primary">
+          </div>
+          <div class="flex flex-col gap-xs">
+            <label for="modalPass" class="font-label text-label-md text-on-surface uppercase">Contraseña</label>
+            <input id="modalPass" type="password" minlength="8" required placeholder="Mínimo 8 caracteres" class="w-full h-11 px-md rounded-md bg-surface-container-low border border-outline-variant text-on-surface placeholder:text-outline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus:border-primary">
+          </div>
+          <button type="submit" class="w-full py-md rounded-md bg-primary-container text-on-primary-container font-label text-label-lg hover:brightness-110 transition-transform duration-state-change ease-state-change">
+            <span id="accessModalBtn">Continuar</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function filterTournaments(status, btn) {
+      document.querySelectorAll('.tour-filter').forEach(b => {
+        b.className = 'tour-filter px-md py-sm rounded-md bg-transparent text-on-surface-variant hover:bg-surface-container-high font-label text-label-md transition-colors duration-state-change ease-state-change';
+        b.setAttribute('aria-selected', 'false');
+      });
+      btn.className = 'tour-filter px-md py-sm rounded-md bg-primary-container text-on-primary-container font-label text-label-md transition-colors duration-state-change ease-state-change';
+      btn.setAttribute('aria-selected', 'true');
+
+      document.querySelectorAll('.tour-card').forEach(card => {
+        if (status === 'ALL' || card.dataset.status === status) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function openAccessModal(mode) {
+      const eyebrow = document.getElementById('accessModalEyebrow');
+      const title = document.getElementById('accessModalTitle');
+      const btn = document.getElementById('accessModalBtn');
+
+      if (mode === 'register') {
+        eyebrow.textContent = 'Nueva cuenta';
+        title.textContent = 'Crear cuenta de Jugador';
+        btn.textContent = 'Registrarme';
+      } else if (mode === 'create') {
+        eyebrow.textContent = 'Organizadores';
+        title.textContent = 'Inicia sesión para crear torneo';
+        btn.textContent = 'Acceder como organizador';
+      } else {
+        eyebrow.textContent = 'Acceso';
+        title.textContent = 'Iniciar sesión';
+        btn.textContent = 'Entrar';
+      }
+
+      const modal = document.getElementById('accessModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeAccessModal() {
+      const modal = document.getElementById('accessModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+  </script>
+
+
+</body></html>
